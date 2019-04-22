@@ -254,12 +254,12 @@ public class Partida {
 		this.fabricanoodles = fabricanoodles;
 	}
 	
-	public void cargarDatos() {
-		
+	public void cargarDatos(String usuario) {
+		Conexion.Conectar();
 	}
 	
-	public void nuevaPartida() {
-		
+	public void nuevaPartida(String usuario) {
+		Conexion.Conectar();
 	}
 	
 }

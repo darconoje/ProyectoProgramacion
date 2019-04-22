@@ -39,14 +39,13 @@ public class Juego extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public Juego() {
+	public Juego(String usuario) {
 		partida = new Partida();
 		if() {
-			partida.cargarDatos();
+			partida.cargarDatos(usuario);
 		}else {
-			partida.nuevaPartida();
+			partida.nuevaPartida(usuario);
 		}
-		partida.cargarDatos();
 		setTitle("EL JUEGO DE LA GALLETA");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 608, 350);

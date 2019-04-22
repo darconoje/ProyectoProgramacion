@@ -103,8 +103,9 @@ public class Acceso extends JFrame {
 					lblUsuarioDuplicado.setVisible(false);
 					lblNewLabel.setVisible(true);	
 				}else {
+					String usuario = textField.getText();
 					dispose();
-					Juego juego = new Juego();
+					Juego juego = new Juego(usuario);
 					juego.setVisible(true);
 					//setUsuario(textField.getText());
 				}
