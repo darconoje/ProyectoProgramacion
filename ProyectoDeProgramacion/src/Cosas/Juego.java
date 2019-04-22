@@ -20,6 +20,7 @@ import java.awt.event.ActionEvent;
 public class Juego extends JFrame {
 	
 	private JPanel contentPane;
+	private Partida partida;
 		
 	/**
 	 * Launch the application.
@@ -27,12 +28,10 @@ public class Juego extends JFrame {
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
-				try {
-					Juego frame = new Juego();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
+				// while(true)
+					// llamar a actualizar datos
+					// sleep (1000)
+
 			}
 		});
 	}
@@ -41,6 +40,13 @@ public class Juego extends JFrame {
 	 * Create the frame.
 	 */
 	public Juego() {
+		partida = new Partida();
+		if() {
+			partida.cargarDatos();
+		}else {
+			partida.nuevaPartida();
+		}
+		partida.cargarDatos();
 		setTitle("EL JUEGO DE LA GALLETA");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 608, 350);
