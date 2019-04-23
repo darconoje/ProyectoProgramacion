@@ -278,7 +278,10 @@ public class Partida {
 	
 	public void cargarDatos(String usuario) {
 		Conexion.Conectar();
-		
+		UsuariosBBDD bbddusuarios = new UsuariosBBDD();
+		String nombre = bbddusuarios.obtenerUsuarioPartida(usuario);
+		int dinero = bbddusuarios.obtenerDinero(usuario);
+		int puntuaciontotal = bbddusuarios.obtenerPuntuacionTotal(usuario);
 	}
 		
 }

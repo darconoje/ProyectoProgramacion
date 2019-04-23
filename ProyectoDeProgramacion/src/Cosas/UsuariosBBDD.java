@@ -73,5 +73,90 @@ public class UsuariosBBDD {
 	public static void registrarse(String nombre, String clave) {
 		Conexion.EjecutarUpdate("INSERT INTO accesousuario" + " (nombreusuario,clave) VALUES"+ " (\""+nombre+"\",\""+clave+"\")");
 	}
-
+	
+	public String obtenerUsuarioPartida(String usuario) {
+		String nombre = "";
+		Conexion.Conectar();
+		ResultSet resultado = Conexion.EjecutarSentencia("SELECT nombreusuario FROM partidasusuario where nombreusuario='"+usuario+"'");
+		try {
+			nombre=resultado.getString("nombreusuario");
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return nombre;
+	}
+	
+	public int obtenerPuntuacionTotal(String usuario) {
+		int puntuaciontotal = 0;
+		Conexion.Conectar();
+		ResultSet resultado = Conexion.EjecutarSentencia("SELECT puntuaciontotal FROM partidasusuario where nombreusuario='"+usuario+"'");
+		try {
+			puntuaciontotal=resultado.getInt("puntuaciontotal");
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return puntuaciontotal;
+	}
+	
+	public int obtenerDinero(String usuario) {
+		int dinero = 0;
+		Conexion.Conectar();
+		ResultSet resultado = Conexion.EjecutarSentencia("SELECT dinero FROM partidasusuario where nombreusuario='"+usuario+"'");
+		try {
+			dinero=resultado.getInt("dinero");
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return dinero;
+	}
+	
+	public int obtenerTiempoTotal(String usuario) {
+		int tiempototal = 0;
+		Conexion.Conectar();
+		ResultSet resultado = Conexion.EjecutarSentencia("SELECT tiempototal FROM partidasusuario where nombreusuario='"+usuario+"'");
+		try {
+			tiempototal=resultado.getInt("tiempototal");
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return tiempototal;
+	}
+	
+	//falta poner dinero por segundo
+	
+	public int obtenerStandGalletitas(String usuario) {
+		int standgalletitas = 0;
+		Conexion.Conectar();
+		ResultSet resultado = Conexion.EjecutarSentencia("SELECT standgalletitas FROM partidasusuario where nombreusuario='"+usuario+"'");
+		try {
+			standgalletitas=resultado.getInt("standgalletitas");
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return standgalletitas;
+	}
+	
+	public int obtenerVendedorGalletitas(String usuario) {
+		int vendedorgalletitas = 0;
+		Conexion.Conectar();
+		ResultSet resultado = Conexion.EjecutarSentencia("SELECT vendedorgalletitas FROM partidasusuario where nombreusuario='"+usuario+"'");
+		try {
+			vendedorgalletitas=resultado.getInt("vendedorgalletitas");
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return vendedorgalletitas;
+	}
+	
+	public int obtenerSupermercadoGalletitas(String usuario) {
+		int supermercadogalletitas = 0;
+		Conexion.Conectar();
+		ResultSet resultado = Conexion.EjecutarSentencia("SELECT supermercadogalletitas FROM partidasusuario where nombreusuario='"+usuario+"'");
+		try {
+			supermercadogalletitas=resultado.getInt("supermercadogalletitas");
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return supermercadogalletitas;
+	}
 }
