@@ -22,26 +22,13 @@ public class Juego extends JFrame {
 	private JPanel contentPane;
 	private Partida partida;
 		
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				// while(true)
-					// llamar a actualizar datos
-					// sleep (1000)
-
-			}
-		});
-	}
 
 	/**
 	 * Create the frame.
 	 */
 	public Juego(String usuario) {
 		partida = new Partida();
-		if() {
+		if(partida.jugadorNuevo(usuario)==false) {
 			partida.cargarDatos(usuario);
 		}else {
 			partida.nuevaPartida(usuario);

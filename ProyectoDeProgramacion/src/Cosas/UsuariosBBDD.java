@@ -62,6 +62,13 @@ public class UsuariosBBDD {
 		}		
 		return claves;		
 	}
+
+	public ArrayList<String> obtenerPartidas(){
+		ArrayList<String> partidas = new ArrayList<String>();
+		Conexion.Conectar();
+		ResultSet resultado = Conexion.EjecutarSentencia("SELECT nombreusuario FROM partidasusuario");
+		return partidas;
+	}
 	
 	public static void registrarse(String nombre, String clave) {
 		Conexion.EjecutarUpdate("INSERT INTO accesousuario" + " (nombreusuario,clave) VALUES"+ " (\""+nombre+"\",\""+clave+"\")");

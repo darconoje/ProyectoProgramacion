@@ -1,5 +1,8 @@
 package Cosas;
 
+import java.sql.ResultSet;
+import java.util.ArrayList;
+
 public class Partida {
 	
 	private String usuario;
@@ -254,12 +257,28 @@ public class Partida {
 		this.fabricanoodles = fabricanoodles;
 	}
 	
-	public void cargarDatos(String usuario) {
+	public boolean jugadorNuevo(String usuario) {
 		Conexion.Conectar();
+		boolean nuevo = true;
+		UsuariosBBDD basedatos = new UsuariosBBDD();
+		ArrayList<String> nombres = basedatos.obtenerPartidas();
+		for(int i = 0 ; i<nombres.size();i++) {
+			if(usuario.equals(nombres.get(i))) {
+				nuevo = false;
+			}
+		}
+		return nuevo;
 	}
 	
 	public void nuevaPartida(String usuario) {
 		Conexion.Conectar();
+		Conexion.EjecutarUpdate("INSERT INTO partidasusuario" + " (nombreusuario,puntuaciontotal,dinero,tiempototal,standgalletitas,vendedorgalletitas,supermercadogalletitas,mercadillogalletitas,fabricagalletitas,standpizzas,vendedorpizzas,supermercadopizzas,mercadillopizzas,fabricapizzas,standpaninis,vendedorpaninis,supermercadopaninis,mercadillopaninis,fabricapaninis,standnoodles,vendedornoodles,supermercadonoodles,mercadillonoodles,fabricanoodles) VALUES"+ " ('"+ usuario +"',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)");
+		cargarDatos(usuario);
 	}
 	
+	public void cargarDatos(String usuario) {
+		Conexion.Conectar();
+		
+	}
+		
 }

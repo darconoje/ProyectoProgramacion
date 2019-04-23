@@ -140,9 +140,5 @@ public class Acceso extends JFrame {
 		});
 		btnRegistrarse.setBounds(209, 93, 108, 23);
 		panel.add(btnRegistrarse);
-		
-
-		
-
 	}
 }
