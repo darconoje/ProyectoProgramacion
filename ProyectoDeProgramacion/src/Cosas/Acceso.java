@@ -28,15 +28,6 @@ public class Acceso extends JFrame {
 	private JLabel lblNewLabel;
 	private JButton btnRegistrarse;
 	
-	/*
-	public String getUsuario() {
-		return usuario;
-	}
-	
-	public void setUsuario(String usuario) {
-		this.usuario=usuario;
-	}
-	*/
 	/**
 	 * Launch the application.
 	 */

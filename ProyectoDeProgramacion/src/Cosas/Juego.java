@@ -29,7 +29,7 @@ public class Juego extends JFrame {
 	public Juego(String usuario) {
 		partida = new Partida();
 		if(partida.jugadorNuevo(usuario)==false) {
-			partida.cargarDatos(usuario);
+			partida = partida.cargarDatos(usuario);
 		}else {
 			partida.nuevaPartida(usuario);
 		}
@@ -83,18 +83,33 @@ public class Juego extends JFrame {
 		panel.add(btnMejoras);
 		
 		JTextPane textPane = new JTextPane();
+		textPane.setFont(new Font("Tahoma", Font.PLAIN, 10));
 		textPane.setEditable(false);
 		textPane.setBackground(Color.WHITE);
 		textPane.setBounds(160, 64, 169, 14);
+		textPane.setText(Integer.toString(partida.getDinero()));
 		panel.add(textPane);
 		
 		JTextPane textPane_1 = new JTextPane();
+		textPane_1.setFont(new Font("Tahoma", Font.PLAIN, 10));
 		textPane_1.setEditable(false);
 		textPane_1.setBackground(Color.WHITE);
 		textPane_1.setBounds(160, 83, 169, 14);
+		textPane_1.setText(Integer.toString(partida.getPuntuaciontotal()));
 		panel.add(textPane_1);
 		
 		JButton btnNewButton_1 = new JButton("");
+		btnNewButton_1.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent arg0) {
+				int dinero = partida.getDinero()+1;
+				int puntuaciontotal = partida.getPuntuaciontotal()+1;
+				partida.setDinero(dinero);
+				textPane.setText(Integer.toString(dinero));
+				partida.setPuntuaciontotal(puntuaciontotal);
+				textPane_1.setText(Integer.toString(puntuaciontotal));
+			}
+		});
 		btnNewButton_1.setBackground(Color.WHITE);
 		btnNewButton_1.setIcon(new ImageIcon(Juego.class.getResource("/Imagenes/cookieicon.png")));
 		btnNewButton_1.setBounds(43, 130, 83, 70);
@@ -120,10 +135,11 @@ public class Juego extends JFrame {
 		panel.add(button_2);
 		
 		JTextPane textPane_2 = new JTextPane();
+		textPane_2.setFont(new Font("Tahoma", Font.BOLD, 11));
 		textPane_2.setEditable(false);
 		textPane_2.setBackground(Color.GRAY);
 		textPane_2.setBounds(43, 21, 117, 20);
-		//textPane_2.setText(frame.getUsuario());
+		textPane_2.setText(partida.getUsuario());
 		panel.add(textPane_2);
 		
 		JLabel lblPizzaNapolitana = new JLabel("PIZZA NAPOLITANA");
@@ -153,15 +169,19 @@ public class Juego extends JFrame {
 		panel.add(lblDineroPorSegundo);
 		
 		JTextPane textPane_3 = new JTextPane();
+		textPane_3.setFont(new Font("Tahoma", Font.PLAIN, 10));
 		textPane_3.setEditable(false);
 		textPane_3.setBackground(Color.WHITE);
 		textPane_3.setBounds(471, 64, 101, 14);
+		textPane_3.setText(Integer.toString(partida.getDineroporsegundo()));
 		panel.add(textPane_3);
 		
 		JTextPane textPane_4 = new JTextPane();
+		textPane_4.setFont(new Font("Tahoma", Font.PLAIN, 10));
 		textPane_4.setEditable(false);
 		textPane_4.setBackground(Color.WHITE);
 		textPane_4.setBounds(472, 83, 101, 14);
+		textPane_4.setText(Integer.toString(partida.getTiempototal()));
 		panel.add(textPane_4);
 		
 		JLabel lblTiempoTotal = new JLabel("Tiempo total:");

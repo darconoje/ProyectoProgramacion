@@ -9,6 +9,7 @@ public class Partida {
 	private int dinero;
 	private int puntuaciontotal;
 	private int dineroporsegundo;
+	private int tiempototal;
 	private int standgalletitas;
 	private int vendedorgalletitas;
 	private int supermercadogalletitas;
@@ -60,6 +61,14 @@ public class Partida {
 	
 	public void setDineroporsegundo(int dineroporsegundo) {
 		this.dineroporsegundo = dineroporsegundo;
+	}
+	
+	public int getTiempototal() {
+		return tiempototal;
+	}
+	
+	public void setTiempototal(int tiempototal) {
+		this.tiempototal = tiempototal;
 	}
 	
 	public int getStandgalletitas() {
@@ -226,7 +235,7 @@ public class Partida {
 		
 	}
 	
-	public Partida(String usuario, int dinero, int puntuaciontotal, int dineroporsegundo, int standgalletitas,
+	public Partida(String usuario, int dinero, int puntuaciontotal, int dineroporsegundo, int tiempototal, int standgalletitas,
 			int vendedorgalletitas, int supermercadogalletitas, int mercadillogalletitas, int fabricagalletitas,
 			int standpizza, int vendedorpizza, int supermercadopizza, int mercadillopizza, int fabricapizza,
 			int standpanini, int vendedorpanini, int supermercadopanini, int mercadillopanini, int fabricapanini,
@@ -235,6 +244,7 @@ public class Partida {
 		this.dinero = dinero;
 		this.puntuaciontotal = puntuaciontotal;
 		this.dineroporsegundo = dineroporsegundo;
+		this.tiempototal = tiempototal;
 		this.standgalletitas = standgalletitas;
 		this.vendedorgalletitas = vendedorgalletitas;
 		this.supermercadogalletitas = supermercadogalletitas;
@@ -276,13 +286,42 @@ public class Partida {
 		cargarDatos(usuario);
 	}
 	
-	public void cargarDatos(String usuario) {
-	/*	Conexion.Conectar();
+	public int dineroPorSegundo() {
+		int dineroporsegundo = 0;
+		return dineroporsegundo;
+	}
+	
+	public Partida cargarDatos(String usuario) {
+		Conexion.Conectar();
 		UsuariosBBDD bbddusuarios = new UsuariosBBDD();
 		String nombre = bbddusuarios.obtenerUsuarioPartida(usuario);
 		int dinero = bbddusuarios.obtenerDinero(usuario);
 		int puntuaciontotal = bbddusuarios.obtenerPuntuacionTotal(usuario);
-	*/	
+		int dineroporsegundo = dineroPorSegundo();
+		int tiempototal = bbddusuarios.obtenerTiempoTotal(usuario);
+		int standgalletitas = bbddusuarios.obtenerStandGalletitas(usuario);
+		int vendedorgalletitas = bbddusuarios.obtenerVendedorGalletitas(usuario);
+		int supermercadogalletitas = bbddusuarios.obtenerSupermercadoGalletitas(usuario);
+		int mercadillogalletitas = bbddusuarios.obtenerMercadilloGalletitas(usuario);
+		int fabricagalletitas = bbddusuarios.obtenerFabricaGalletitas(usuario);
+		int standpizzas = bbddusuarios.obtenerStandPizzas(usuario);
+		int vendedorpizzas = bbddusuarios.obtenerVendedorPizzas(usuario);
+		int supermercadopizzas = bbddusuarios.obtenerSupermercadoPizzas(usuario);
+		int mercadillopizzas = bbddusuarios.obtenerMercadilloPizzas(usuario);
+		int fabricapizzas = bbddusuarios.obtenerFabricaPizzas(usuario);
+		int standpaninis = bbddusuarios.obtenerStandPaninis(usuario);
+		int vendedorpaninis = bbddusuarios.obtenerVendedorPaninis(usuario);
+		int supermercadopaninis = bbddusuarios.obtenerSupermercadoPaninis(usuario);
+		int mercadillopaninis = bbddusuarios.obtenerMercadilloPaninis(usuario);
+		int fabricapaninis = bbddusuarios.obtenerFabricaPaninis(usuario);
+		int standnoodles = bbddusuarios.obtenerStandNoodles(usuario);
+		int vendedornoodles = bbddusuarios.obtenerVendedorNoodles(usuario);
+		int supermercadonoodles = bbddusuarios.obtenerSupermercadoNoodles(usuario);
+		int mercadillonoodles = bbddusuarios.obtenerMercadilloNoodles(usuario);
+		int fabricanoodles = bbddusuarios.obtenerFabricaNoodles(usuario);
+
+		Partida partida = new Partida(nombre,dinero,puntuaciontotal,dineroporsegundo,tiempototal,standgalletitas,vendedorgalletitas,supermercadogalletitas,mercadillogalletitas,fabricagalletitas,standpizzas,vendedorpizzas,supermercadopizzas,mercadillopizzas,fabricapizzas,standpaninis,vendedorpaninis,supermercadopaninis,mercadillopaninis,fabricapaninis,standnoodles,vendedornoodles,supermercadonoodles,mercadillonoodles,fabricanoodles);
+		return partida;
 	}
 		
 }
