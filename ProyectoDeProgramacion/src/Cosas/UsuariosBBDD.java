@@ -67,6 +67,13 @@ public class UsuariosBBDD {
 		ArrayList<String> partidas = new ArrayList<String>();
 		Conexion.Conectar();
 		ResultSet resultado = Conexion.EjecutarSentencia("SELECT nombreusuario FROM partidasusuario");
+		try {
+			while(resultado.next()){
+				partidas.add(resultado.getString("nombreusuario"));
+			}
+		}catch(SQLException e){
+			e.printStackTrace();
+		}
 		return partidas;
 	}
 	
@@ -158,5 +165,207 @@ public class UsuariosBBDD {
 			e.printStackTrace();
 		}
 		return supermercadogalletitas;
+	}
+	
+	public int obtenerMercadilloGalletitas(String usuario) {
+		int mercadillogalletitas = 0;
+		Conexion.Conectar();
+		ResultSet resultado = Conexion.EjecutarSentencia("SELECT mercadillodogalletitas FROM partidasusuario where nombreusuario='"+usuario+"'");
+		try {
+			mercadillogalletitas=resultado.getInt("mercadillogalletitas");
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return mercadillogalletitas;
+	}
+	
+	public int obtenerFabricaGalletitas(String usuario) {
+		int fabricagalletitas = 0;
+		Conexion.Conectar();
+		ResultSet resultado = Conexion.EjecutarSentencia("SELECT fabricagalletitas FROM partidasusuario where nombreusuario='"+usuario+"'");
+		try {
+			fabricagalletitas=resultado.getInt("fabricagalletitas");
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return fabricagalletitas;
+	}
+	
+	public int obtenerStandPizzas(String usuario) {
+		int standpizzas = 0;
+		Conexion.Conectar();
+		ResultSet resultado = Conexion.EjecutarSentencia("SELECT standpizzas FROM partidasusuario where nombreusuario='"+usuario+"'");
+		try {
+			standpizzas=resultado.getInt("standpizzas");
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return standpizzas;
+	}
+	
+	public int obtenerVendedorPizzas(String usuario) {
+		int vendedorpizzas = 0;
+		Conexion.Conectar();
+		ResultSet resultado = Conexion.EjecutarSentencia("SELECT vendedorpizzas FROM partidasusuario where nombreusuario='"+usuario+"'");
+		try {
+			vendedorpizzas=resultado.getInt("vendedorpizzas");
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return vendedorpizzas;
+	}
+	
+	public int obtenerSupermercadoPizzas(String usuario) {
+		int supermercadopizzas = 0;
+		Conexion.Conectar();
+		ResultSet resultado = Conexion.EjecutarSentencia("SELECT supermercadopizzas FROM partidasusuario where nombreusuario='"+usuario+"'");
+		try {
+			supermercadopizzas=resultado.getInt("supermercadopizzas");
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return supermercadopizzas;
+	}
+	
+	public int obtenerMercadilloPizzas(String usuario) {
+		int mercadillopizzas = 0;
+		Conexion.Conectar();
+		ResultSet resultado = Conexion.EjecutarSentencia("SELECT mercadillodopizzas FROM partidasusuario where nombreusuario='"+usuario+"'");
+		try {
+			mercadillopizzas=resultado.getInt("mercadillopizzas");
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return mercadillopizzas;
+	}
+	
+	public int obtenerFabricaPizzas(String usuario) {
+		int fabricapizzas = 0;
+		Conexion.Conectar();
+		ResultSet resultado = Conexion.EjecutarSentencia("SELECT fabricapizzas FROM partidasusuario where nombreusuario='"+usuario+"'");
+		try {
+			fabricapizzas=resultado.getInt("fabricapizzas");
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return fabricapizzas;
+	}
+	public int obtenerStandPaninis(String usuario) {
+		int standpaninis = 0;
+		Conexion.Conectar();
+		ResultSet resultado = Conexion.EjecutarSentencia("SELECT standpaninis FROM partidasusuario where nombreusuario='"+usuario+"'");
+		try {
+			standpaninis=resultado.getInt("standpaninis");
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return standpaninis;
+	}
+	
+	public int obtenerVendedorPaninis(String usuario) {
+		int vendedorpaninis = 0;
+		Conexion.Conectar();
+		ResultSet resultado = Conexion.EjecutarSentencia("SELECT vendedorpaninis FROM partidasusuario where nombreusuario='"+usuario+"'");
+		try {
+			vendedorpaninis=resultado.getInt("vendedorpaninis");
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return vendedorpaninis;
+	}
+	
+	public int obtenerSupermercadoPaninis(String usuario) {
+		int supermercadopaninis = 0;
+		Conexion.Conectar();
+		ResultSet resultado = Conexion.EjecutarSentencia("SELECT supermercadopaninis FROM partidasusuario where nombreusuario='"+usuario+"'");
+		try {
+			supermercadopaninis=resultado.getInt("supermercadopaninis");
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return supermercadopaninis;
+	}
+	
+	public int obtenerMercadilloPaninis(String usuario) {
+		int mercadillopaninis = 0;
+		Conexion.Conectar();
+		ResultSet resultado = Conexion.EjecutarSentencia("SELECT mercadillodopaninis FROM partidasusuario where nombreusuario='"+usuario+"'");
+		try {
+			mercadillopaninis=resultado.getInt("mercadillopaninis");
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return mercadillopaninis;
+	}
+	
+	public int obtenerFabricaPaninis(String usuario) {
+		int fabricapaninis = 0;
+		Conexion.Conectar();
+		ResultSet resultado = Conexion.EjecutarSentencia("SELECT fabricapaninis FROM partidasusuario where nombreusuario='"+usuario+"'");
+		try {
+			fabricapaninis=resultado.getInt("fabricapaninis");
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return fabricapaninis;
+	}
+	public int obtenerStandNoodles(String usuario) {
+		int standnoodles = 0;
+		Conexion.Conectar();
+		ResultSet resultado = Conexion.EjecutarSentencia("SELECT standnoodles FROM partidasusuario where nombreusuario='"+usuario+"'");
+		try {
+			standnoodles=resultado.getInt("standnoodles");
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return standnoodles;
+	}
+	
+	public int obtenerVendedorNoodles(String usuario) {
+		int vendedornoodles = 0;
+		Conexion.Conectar();
+		ResultSet resultado = Conexion.EjecutarSentencia("SELECT vendedornoodles FROM partidasusuario where nombreusuario='"+usuario+"'");
+		try {
+			vendedornoodles=resultado.getInt("vendedornoodles");
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return vendedornoodles;
+	}
+	
+	public int obtenerSupermercadoNoodles(String usuario) {
+		int supermercadonoodles = 0;
+		Conexion.Conectar();
+		ResultSet resultado = Conexion.EjecutarSentencia("SELECT supermercadonoodles FROM partidasusuario where nombreusuario='"+usuario+"'");
+		try {
+			supermercadonoodles=resultado.getInt("supermercadonoodles");
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return supermercadonoodles;
+	}
+	
+	public int obtenerMercadilloNoodles(String usuario) {
+		int mercadillonoodles = 0;
+		Conexion.Conectar();
+		ResultSet resultado = Conexion.EjecutarSentencia("SELECT mercadillonoodles FROM partidasusuario where nombreusuario='"+usuario+"'");
+		try {
+			mercadillonoodles=resultado.getInt("mercadillonoodles");
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return mercadillonoodles;
+	}
+	
+	public int obtenerFabricaNoodles(String usuario) {
+		int fabricanoodles = 0;
+		Conexion.Conectar();
+		ResultSet resultado = Conexion.EjecutarSentencia("SELECT fabricanoodles FROM partidasusuario where nombreusuario='"+usuario+"'");
+		try {
+			fabricanoodles=resultado.getInt("fabricanoodles");
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return fabricanoodles;
 	}
 }
