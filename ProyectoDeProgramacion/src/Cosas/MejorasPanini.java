@@ -24,7 +24,7 @@ public class MejorasPanini extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public MejorasPanini() {
+	public MejorasPanini(Partida partida) {
 		setTitle("MEJORAS");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 425, 250);

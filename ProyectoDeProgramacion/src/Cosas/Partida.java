@@ -268,7 +268,6 @@ public class Partida {
 	}
 	
 	public boolean jugadorNuevo(String usuario) {
-		Conexion.Conectar();
 		boolean nuevo = true;
 		UsuariosBBDD basedatos = new UsuariosBBDD();
 		ArrayList<String> nombres = basedatos.obtenerPartidas();
@@ -281,7 +280,6 @@ public class Partida {
 	}
 	
 	public void nuevaPartida(String usuario) {
-		Conexion.Conectar();
 		Conexion.EjecutarUpdate("INSERT INTO partidasusuario" + " (nombreusuario,puntuaciontotal,dinero,tiempototal,standgalletitas,vendedorgalletitas,supermercadogalletitas,mercadillogalletitas,fabricagalletitas,standpizzas,vendedorpizzas,supermercadopizzas,mercadillopizzas,fabricapizzas,standpaninis,vendedorpaninis,supermercadopaninis,mercadillopaninis,fabricapaninis,standnoodles,vendedornoodles,supermercadonoodles,mercadillonoodles,fabricanoodles) VALUES"+ " ('"+ usuario +"',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)");
 		cargarDatos(usuario);
 	}
@@ -292,7 +290,6 @@ public class Partida {
 	}
 	
 	public Partida cargarDatos(String usuario) {
-		Conexion.Conectar();
 		UsuariosBBDD bbddusuarios = new UsuariosBBDD();
 		String nombre = bbddusuarios.obtenerUsuarioPartida(usuario);
 		int dinero = bbddusuarios.obtenerDinero(usuario);
@@ -324,9 +321,30 @@ public class Partida {
 		return partida;
 	}
 	
-	public void guardarPartida() {
-		Conexion.Conectar();
-		Conexion.EjecutarUpdate("UPDATE partidasusuario");
+	public void guardarPartida(Partida partida) {
+		Conexion.EjecutarUpdate("UPDATE partidasusuario SET dinero = "+partida.getDinero()+" WHERE nombreusuario = '"+partida.getUsuario()+"' ");
+		Conexion.EjecutarUpdate("UPDATE partidasusuario SET puntuaciontotal = "+partida.getPuntuaciontotal()+" WHERE nombreusuario = '"+partida.getUsuario()+"' ");
+		Conexion.EjecutarUpdate("UPDATE partidasusuario SET tiempototal = "+partida.getTiempototal()+" WHERE nombreusuario = '"+partida.getUsuario()+"' ");
+		Conexion.EjecutarUpdate("UPDATE partidasusuario SET standgalletitas = "+partida.getStandgalletitas()+" WHERE nombreusuario = '"+partida.getUsuario()+"' ");
+		Conexion.EjecutarUpdate("UPDATE partidasusuario SET vendedorgalletitas = "+partida.getVendedorgalletitas()+" WHERE nombreusuario = '"+partida.getUsuario()+"' ");
+		Conexion.EjecutarUpdate("UPDATE partidasusuario SET supermercadogalletitas = "+partida.getSupermercadogalletitas()+" WHERE nombreusuario = '"+partida.getUsuario()+"' ");
+		Conexion.EjecutarUpdate("UPDATE partidasusuario SET mercadillogalletitas = "+partida.getMercadillogalletitas()+" WHERE nombreusuario = '"+partida.getUsuario()+"' ");
+		Conexion.EjecutarUpdate("UPDATE partidasusuario SET fabricagalletitas = "+partida.getFabricagalletitas()+" WHERE nombreusuario = '"+partida.getUsuario()+"' ");
+		Conexion.EjecutarUpdate("UPDATE partidasusuario SET standpizzas = "+partida.getStandpizza()+" WHERE nombreusuario = '"+partida.getUsuario()+"' ");
+		Conexion.EjecutarUpdate("UPDATE partidasusuario SET vendedorpizzas = "+partida.getVendedorpizza()+" WHERE nombreusuario = '"+partida.getUsuario()+"' ");
+		Conexion.EjecutarUpdate("UPDATE partidasusuario SET supermercadopizzas = "+partida.getSupermercadopizza()+" WHERE nombreusuario = '"+partida.getUsuario()+"' ");
+		Conexion.EjecutarUpdate("UPDATE partidasusuario SET mercadillopizzas = "+partida.getMercadillopizza()+" WHERE nombreusuario = '"+partida.getUsuario()+"' ");
+		Conexion.EjecutarUpdate("UPDATE partidasusuario SET fabricapizzas = "+partida.getFabricapizza()+" WHERE nombreusuario = '"+partida.getUsuario()+"' ");
+		Conexion.EjecutarUpdate("UPDATE partidasusuario SET standpaninis = "+partida.getStandpanini()+" WHERE nombreusuario = '"+partida.getUsuario()+"' ");
+		Conexion.EjecutarUpdate("UPDATE partidasusuario SET vendedorpaninis = "+partida.getVendedorpanini()+" WHERE nombreusuario = '"+partida.getUsuario()+"' ");
+		Conexion.EjecutarUpdate("UPDATE partidasusuario SET supermercadopaninis = "+partida.getSupermercadopanini()+" WHERE nombreusuario = '"+partida.getUsuario()+"' ");
+		Conexion.EjecutarUpdate("UPDATE partidasusuario SET mercadillopaninis = "+partida.getMercadillopanini()+" WHERE nombreusuario = '"+partida.getUsuario()+"' ");
+		Conexion.EjecutarUpdate("UPDATE partidasusuario SET fabricapaninis = "+partida.getFabricapanini()+" WHERE nombreusuario = '"+partida.getUsuario()+"' ");
+		Conexion.EjecutarUpdate("UPDATE partidasusuario SET standnoodles = "+partida.getStandnoodles()+" WHERE nombreusuario = '"+partida.getUsuario()+"' ");
+		Conexion.EjecutarUpdate("UPDATE partidasusuario SET vendedornoodles = "+partida.getVendedornoodles()+" WHERE nombreusuario = '"+partida.getUsuario()+"' ");
+		Conexion.EjecutarUpdate("UPDATE partidasusuario SET supermercadonoodles = "+partida.getSupermercadonoodles()+" WHERE nombreusuario = '"+partida.getUsuario()+"' ");
+		Conexion.EjecutarUpdate("UPDATE partidasusuario SET mercadillonoodles = "+partida.getMercadillonoodles()+" WHERE nombreusuario = '"+partida.getUsuario()+"' ");
+		Conexion.EjecutarUpdate("UPDATE partidasusuario SET fabricanoodles = "+partida.getFabricanoodles()+" WHERE nombreusuario = '"+partida.getUsuario()+"' ");
 	}
 		
 }

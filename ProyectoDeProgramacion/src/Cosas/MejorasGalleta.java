@@ -23,7 +23,7 @@ public class MejorasGalleta extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public MejorasGalleta() {
+	public MejorasGalleta(Partida partida) {
 		setTitle("MEJORAS");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 425, 250);

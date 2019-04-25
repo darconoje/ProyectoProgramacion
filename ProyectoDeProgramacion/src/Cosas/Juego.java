@@ -73,7 +73,7 @@ public class Juego extends JFrame {
 			
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				MejorasPrevio mejoras = new MejorasPrevio();
+				MejorasPrevio mejoras = new MejorasPrevio(partida);
 				mejoras.setVisible(true);
 			}
 			
@@ -122,14 +122,44 @@ public class Juego extends JFrame {
 		
 		JButton button_1 = new JButton("");
 		button_1.setBackground(Color.WHITE);
-		button_1.setEnabled(false);
+		if(partida.getPuntuaciontotal()>=50000) {
+			button_1.setEnabled(true);
+			button_1.addMouseListener(new MouseAdapter() {
+				@Override
+				public void mouseClicked(MouseEvent arg0) {
+					int dinero = partida.getDinero()+100;
+					int puntuaciontotal = partida.getPuntuaciontotal()+100;
+					partida.setDinero(dinero);
+					textPane.setText(Integer.toString(dinero));
+					partida.setPuntuaciontotal(puntuaciontotal);
+					textPane_1.setText(Integer.toString(puntuaciontotal));
+				}
+			});
+		}else {
+			button_1.setEnabled(false);
+		}
 		button_1.setIcon(new ImageIcon(Juego.class.getResource("/Imagenes/paniniicon.png")));
 		button_1.setBounds(333, 130, 83, 70);
 		panel.add(button_1);
 		
 		JButton button_2 = new JButton("");
 		button_2.setBackground(Color.WHITE);
-		button_2.setEnabled(false);
+		if(partida.getPuntuaciontotal()>=200000) {
+			button_2.setEnabled(true);
+			button_2.addMouseListener(new MouseAdapter() {
+				@Override
+				public void mouseClicked(MouseEvent arg0) {
+					int dinero = partida.getDinero()+500;
+					int puntuaciontotal = partida.getPuntuaciontotal()+500;
+					partida.setDinero(dinero);
+					textPane.setText(Integer.toString(dinero));
+					partida.setPuntuaciontotal(puntuaciontotal);
+					textPane_1.setText(Integer.toString(puntuaciontotal));
+				}
+			});
+		}else {
+			button_2.setEnabled(false);
+		}
 		button_2.setIcon(new ImageIcon(Juego.class.getResource("/Imagenes/noodlesicon.png")));
 		button_2.setBounds(480, 130, 83, 70);
 		panel.add(button_2);
@@ -158,7 +188,22 @@ public class Juego extends JFrame {
 		panel.add(lblNoodles);
 		
 		JButton button = new JButton("");
-		button.setEnabled(false);
+		if(partida.getPuntuaciontotal()>1000) {
+			button.setEnabled(true);
+			button.addMouseListener(new MouseAdapter() {
+				@Override
+				public void mouseClicked(MouseEvent arg0) {
+					int dinero = partida.getDinero()+25;
+					int puntuaciontotal = partida.getPuntuaciontotal()+25;
+					partida.setDinero(dinero);
+					textPane.setText(Integer.toString(dinero));
+					partida.setPuntuaciontotal(puntuaciontotal);
+					textPane_1.setText(Integer.toString(puntuaciontotal));
+				}
+			});
+		}else {
+			button.setEnabled(false);		
+		}
 		button.setBackground(Color.WHITE);
 		button.setIcon(new ImageIcon(Juego.class.getResource("/Imagenes/pizzaicon.png")));
 		button.setBounds(188, 130, 83, 70);
@@ -194,8 +239,10 @@ public class Juego extends JFrame {
 		panel.add(btnCargar);
 		
 		JButton btnGuardar = new JButton("Guardar");
-		btnGuardar.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
+		btnGuardar.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent arg0) {
+				partida.guardarPartida(partida);
 			}
 		});
 		btnGuardar.setBackground(Color.WHITE);

@@ -17,7 +17,7 @@ public class MejorasPrevio extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public MejorasPrevio() {
+	public MejorasPrevio(Partida partida) {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 150, 225);
 		contentPane = new JPanel();
@@ -30,7 +30,7 @@ public class MejorasPrevio extends JFrame {
 		btnNewButton.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				MejorasGalleta mejorasgalleta = new MejorasGalleta();
+				MejorasGalleta mejorasgalleta = new MejorasGalleta(partida);
 				mejorasgalleta.setVisible(true);
 			}
 		});
@@ -38,38 +38,48 @@ public class MejorasPrevio extends JFrame {
 		contentPane.add(btnNewButton);
 		
 		JButton btnNewButton_1 = new JButton("Pizzas");
-		btnNewButton_1.setEnabled(false);
-		btnNewButton_1.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseClicked(MouseEvent e) {
-				MejorasPizza mejoraspizza = new MejorasPizza();
-				mejoraspizza.setVisible(true);
-			}
-		});
+		if(partida.getPuntuaciontotal()>=1000) {
+			btnNewButton_1.setEnabled(true);
+			btnNewButton_1.addMouseListener(new MouseAdapter() {
+				@Override
+				public void mouseClicked(MouseEvent e) {
+					MejorasPizza mejoraspizza = new MejorasPizza(partida);
+					mejoraspizza.setVisible(true);
+				}
+			});
+		}else {
+			btnNewButton_1.setEnabled(false);	
+		}
 		btnNewButton_1.setBounds(23, 45, 89, 23);
 		contentPane.add(btnNewButton_1);
-		
 		JButton btnNewButton_2 = new JButton("Paninis");
-		btnNewButton_2.setEnabled(false);
-		btnNewButton_2.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseClicked(MouseEvent e) {
-				MejorasPanini mejoraspanini = new MejorasPanini();
-				mejoraspanini.setVisible(true);
-			}
-		});
+		if(partida.getPuntuaciontotal()>=50000) {
+			btnNewButton_2.setEnabled(true);
+			btnNewButton_2.addMouseListener(new MouseAdapter() {
+				@Override
+				public void mouseClicked(MouseEvent e) {
+					MejorasPanini mejoraspanini = new MejorasPanini(partida);
+					mejoraspanini.setVisible(true);
+				}
+			});
+		}else {
+			btnNewButton_2.setEnabled(false);		
+		}
 		btnNewButton_2.setBounds(23, 79, 89, 23);
 		contentPane.add(btnNewButton_2);
-		
 		JButton btnNewButton_3 = new JButton("Noodles");
-		btnNewButton_3.setEnabled(false);
-		btnNewButton_3.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseClicked(MouseEvent e) {
-				MejorasNoodles mejorasnoodles = new MejorasNoodles();
-				mejorasnoodles.setVisible(true);
-			}
-		});
+		if(partida.getPuntuaciontotal()>=200000) {
+			btnNewButton_3.setEnabled(true);
+			btnNewButton_3.addMouseListener(new MouseAdapter() {
+				@Override
+				public void mouseClicked(MouseEvent e) {
+					MejorasNoodles mejorasnoodles = new MejorasNoodles(partida);
+					mejorasnoodles.setVisible(true);
+				}
+			});
+		}else {
+			btnNewButton_3.setEnabled(false);			
+		}
 		btnNewButton_3.setBounds(23, 113, 89, 23);
 		contentPane.add(btnNewButton_3);
 		

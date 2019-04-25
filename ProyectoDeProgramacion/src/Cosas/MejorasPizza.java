@@ -23,7 +23,7 @@ public class MejorasPizza extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public MejorasPizza() {
+	public MejorasPizza(Partida partida) {
 		setTitle("MEJORAS");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 425, 250);

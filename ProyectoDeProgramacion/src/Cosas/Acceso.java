@@ -32,6 +32,7 @@ public class Acceso extends JFrame {
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
+		Conexion.Conectar();
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
