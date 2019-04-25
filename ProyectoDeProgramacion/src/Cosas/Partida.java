@@ -323,5 +323,10 @@ public class Partida {
 		Partida partida = new Partida(nombre,dinero,puntuaciontotal,dineroporsegundo,tiempototal,standgalletitas,vendedorgalletitas,supermercadogalletitas,mercadillogalletitas,fabricagalletitas,standpizzas,vendedorpizzas,supermercadopizzas,mercadillopizzas,fabricapizzas,standpaninis,vendedorpaninis,supermercadopaninis,mercadillopaninis,fabricapaninis,standnoodles,vendedornoodles,supermercadonoodles,mercadillonoodles,fabricanoodles);
 		return partida;
 	}
+	
+	public void guardarPartida() {
+		Conexion.Conectar();
+		Conexion.EjecutarUpdate("UPDATE partidasusuario");
+	}
 		
 }
