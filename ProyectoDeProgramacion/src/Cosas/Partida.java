@@ -1,6 +1,7 @@
 package Cosas;
 
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class Partida {
@@ -345,6 +346,58 @@ public class Partida {
 		Conexion.EjecutarUpdate("UPDATE partidasusuario SET supermercadonoodles = "+partida.getSupermercadonoodles()+" WHERE nombreusuario = '"+partida.getUsuario()+"' ");
 		Conexion.EjecutarUpdate("UPDATE partidasusuario SET mercadillonoodles = "+partida.getMercadillonoodles()+" WHERE nombreusuario = '"+partida.getUsuario()+"' ");
 		Conexion.EjecutarUpdate("UPDATE partidasusuario SET fabricanoodles = "+partida.getFabricanoodles()+" WHERE nombreusuario = '"+partida.getUsuario()+"' ");
+	}
+	
+	public int obtenerDineroPorClickGalletita() {
+		int dineroporclickgalletita = 0;
+		ResultSet resultado = Conexion.EjecutarSentencia("SELECT dineroporclic FROM productos where nombreproducto='Galletita'");
+		try {
+			while(resultado.next()) {
+				dineroporclickgalletita=resultado.getInt("dineroporclic");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return dineroporclickgalletita;
+	}
+	
+	public int obtenerDineroPorClickPizza() {
+		int dineroporclickpizza = 0;
+		ResultSet resultado = Conexion.EjecutarSentencia("SELECT dineroporclic FROM productos where nombreproducto='Pizza Napolitana'");
+		try {
+			while(resultado.next()) {
+				dineroporclickpizza=resultado.getInt("dineroporclic");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return dineroporclickpizza;
+	}
+	
+	public int obtenerDineroPorClickPanini() {
+		int dineroporclickpanini = 0;
+		ResultSet resultado = Conexion.EjecutarSentencia("SELECT dineroporclic FROM productos where nombreproducto='Panini del Polvillo'");
+		try {
+			while(resultado.next()) {
+				dineroporclickpanini=resultado.getInt("dineroporclic");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return dineroporclickpanini;
+	}
+	
+	public int obtenerDineroPorClickNoodles() {
+		int dineroporclicknoodles = 0;
+		ResultSet resultado = Conexion.EjecutarSentencia("SELECT dineroporclic FROM productos where nombreproducto='Golden Noodles'");
+		try {
+			while(resultado.next()) {
+				dineroporclicknoodles=resultado.getInt("dineroporclic");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return dineroporclicknoodles;
 	}
 		
 }

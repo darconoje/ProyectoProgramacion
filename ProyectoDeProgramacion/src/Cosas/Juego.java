@@ -103,7 +103,7 @@ public class Juego extends JFrame {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
 				int dinero = partida.getDinero()+1;
-				int puntuaciontotal = partida.getPuntuaciontotal()+1;
+				int puntuaciontotal = partida.getPuntuaciontotal()+partida.obtenerDineroPorClickGalletita();
 				partida.setDinero(dinero);
 				textPane.setText(Integer.toString(dinero));
 				partida.setPuntuaciontotal(puntuaciontotal);
@@ -128,7 +128,7 @@ public class Juego extends JFrame {
 				@Override
 				public void mouseClicked(MouseEvent arg0) {
 					int dinero = partida.getDinero()+100;
-					int puntuaciontotal = partida.getPuntuaciontotal()+100;
+					int puntuaciontotal = partida.getPuntuaciontotal()+partida.obtenerDineroPorClickPanini();
 					partida.setDinero(dinero);
 					textPane.setText(Integer.toString(dinero));
 					partida.setPuntuaciontotal(puntuaciontotal);
@@ -150,7 +150,7 @@ public class Juego extends JFrame {
 				@Override
 				public void mouseClicked(MouseEvent arg0) {
 					int dinero = partida.getDinero()+500;
-					int puntuaciontotal = partida.getPuntuaciontotal()+500;
+					int puntuaciontotal = partida.getPuntuaciontotal()+partida.obtenerDineroPorClickNoodles();
 					partida.setDinero(dinero);
 					textPane.setText(Integer.toString(dinero));
 					partida.setPuntuaciontotal(puntuaciontotal);
@@ -194,7 +194,7 @@ public class Juego extends JFrame {
 				@Override
 				public void mouseClicked(MouseEvent arg0) {
 					int dinero = partida.getDinero()+25;
-					int puntuaciontotal = partida.getPuntuaciontotal()+25;
+					int puntuaciontotal = partida.getPuntuaciontotal()+partida.obtenerDineroPorClickPizza();
 					partida.setDinero(dinero);
 					textPane.setText(Integer.toString(dinero));
 					partida.setPuntuaciontotal(puntuaciontotal);
