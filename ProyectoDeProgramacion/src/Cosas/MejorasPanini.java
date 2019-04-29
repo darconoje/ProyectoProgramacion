@@ -148,26 +148,31 @@ public class MejorasPanini extends JFrame {
 		JTextPane textPane = new JTextPane();
 		textPane.setEditable(false);
 		textPane.setBounds(352, 36, 46, 20);
+		textPane.setText(Integer.toString(partida.getStandpanini()));
 		contentPane.add(textPane);
 		
 		JTextPane textPane_4 = new JTextPane();
 		textPane_4.setEditable(false);
 		textPane_4.setBounds(352, 62, 46, 20);
+		textPane_4.setText(Integer.toString(partida.getVendedorpanini()));
 		contentPane.add(textPane_4);
 		
 		JTextPane textPane_8 = new JTextPane();
 		textPane_8.setEditable(false);
 		textPane_8.setBounds(352, 87, 46, 20);
+		textPane_8.setText(Integer.toString(partida.getSupermercadopanini()));
 		contentPane.add(textPane_8);
 		
 		JTextPane textPane_12 = new JTextPane();
 		textPane_12.setEditable(false);
 		textPane_12.setBounds(352, 112, 46, 20);
+		textPane_12.setText(Integer.toString(partida.getMercadillopanini()));
 		contentPane.add(textPane_12);
 		
 		JTextPane textPane_16 = new JTextPane();
 		textPane_16.setEditable(false);
 		textPane_16.setBounds(352, 137, 46, 20);
+		textPane_16.setText(Integer.toString(partida.getFabricapanini()));
 		contentPane.add(textPane_16);
 		
 		JButton btnNewButton = new JButton("Volver");
