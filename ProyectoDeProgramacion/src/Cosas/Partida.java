@@ -399,5 +399,251 @@ public class Partida {
 		}
 		return dineroporclicknoodles;
 	}
+	
+	public int precioStandGalletitas() {
+		int preciostandgalletitas = 0;
+		ResultSet resultado = Conexion.EjecutarSentencia("SELECT preciounidad FROM mejoras where nombremejora='Stand Galletitas'");
+		try {
+			while(resultado.next()) {
+				preciostandgalletitas=resultado.getInt("preciounidad");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return preciostandgalletitas;
+	}
+	
+	public int precioVendedorGalletitas() {
+		int preciovendedorgalletitas = 0;
+		ResultSet resultado = Conexion.EjecutarSentencia("SELECT preciounidad FROM mejoras where nombremejora='Vendedor Galletitas'");
+		try {
+			while(resultado.next()) {
+				preciovendedorgalletitas=resultado.getInt("preciounidad");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return preciovendedorgalletitas;
+	}	
+	
+	public int precioSupermercadoGalletitas() {
+		int preciosupermercadogalletitas = 0;
+		ResultSet resultado = Conexion.EjecutarSentencia("SELECT preciounidad FROM mejoras where nombremejora='Supermercado Galletitas'");
+		try {
+			while(resultado.next()) {
+				preciosupermercadogalletitas=resultado.getInt("preciounidad");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return preciosupermercadogalletitas;
+	}	
+	
+	public int precioMercadilloGalletitas() {
+		int preciomercadillogalletitas = 0;
+		ResultSet resultado = Conexion.EjecutarSentencia("SELECT preciounidad FROM mejoras where nombremejora='Mercadillo Galletitas'");
+		try {
+			while(resultado.next()) {
+				preciomercadillogalletitas=resultado.getInt("preciounidad");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return preciomercadillogalletitas;
+	}	
+	
+	public int precioFabricaGalletitas() {
+		int preciofabricagalletitas = 0;
+		ResultSet resultado = Conexion.EjecutarSentencia("SELECT preciounidad FROM mejoras where nombremejora='Fabrica Galletitas'");
+		try {
+			while(resultado.next()) {
+				preciofabricagalletitas=resultado.getInt("preciounidad");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return preciofabricagalletitas;
+	}	
+	
+	public int precioStandPizzas() {
+		int preciostandpizzas = 0;
+		ResultSet resultado = Conexion.EjecutarSentencia("SELECT preciounidad FROM mejoras where nombremejora='Stand Pizzas'");
+		try {
+			while(resultado.next()) {
+				preciostandpizzas=resultado.getInt("preciounidad");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return preciostandpizzas;
+	}	
+	
+	public int precioVendedorPizzas() {
+		int preciovendedorpizzas = 0;
+		ResultSet resultado = Conexion.EjecutarSentencia("SELECT preciounidad FROM mejoras where nombremejora='Vendedor Pizzas'");
+		try {
+			while(resultado.next()) {
+				preciovendedorpizzas=resultado.getInt("preciounidad");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return preciovendedorpizzas;
+	}	
 		
+	public int precioSupermercadoPizzas() {
+		int preciosupermercadopizzas = 0;
+		ResultSet resultado = Conexion.EjecutarSentencia("SELECT preciounidad FROM mejoras where nombremejora='Supermercado Pizzas'");
+		try {
+			while(resultado.next()) {
+				preciosupermercadopizzas=resultado.getInt("preciounidad");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return preciosupermercadopizzas;
+	}	
+	
+	public int precioMercadilloPizzas() {
+		int preciomercadillopizzas = 0;
+		ResultSet resultado = Conexion.EjecutarSentencia("SELECT preciounidad FROM mejoras where nombremejora='Mercadillo Pizzas'");
+		try {
+			while(resultado.next()) {
+				preciomercadillopizzas=resultado.getInt("preciounidad");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return preciomercadillopizzas;
+	}	
+	
+	public int precioStandPaninis() {
+		int preciostandpaninis = 0;
+		ResultSet resultado = Conexion.EjecutarSentencia("SELECT preciounidad FROM mejoras where nombremejora='Stand Paninis'");
+		try {
+			while(resultado.next()) {
+				preciostandpaninis=resultado.getInt("preciounidad");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return preciostandpaninis;
+	}	
+	
+	public int precioVendedorPaninis() {
+		int preciovendedorpaninis = 0;
+		ResultSet resultado = Conexion.EjecutarSentencia("SELECT preciounidad FROM mejoras where nombremejora='Vendedor Paninis'");
+		try {
+			while(resultado.next()) {
+				preciovendedorpaninis=resultado.getInt("preciounidad");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return preciovendedorpaninis;
+	}
+	
+	public int precioSupermercadoPaninis() {
+		int preciosupermercadopaninis = 0;
+		ResultSet resultado = Conexion.EjecutarSentencia("SELECT preciounidad FROM mejoras where nombremejora='Supermercado Paninis'");
+		try {
+			while(resultado.next()) {
+				preciosupermercadopaninis=resultado.getInt("preciounidad");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return preciosupermercadopaninis;
+	}	
+	
+	public int precioMercadilloPaninis() {
+		int preciomercadillopaninis = 0;
+		ResultSet resultado = Conexion.EjecutarSentencia("SELECT preciounidad FROM mejoras where nombremejora='Mercadillo Paninis'");
+		try {
+			while(resultado.next()) {
+				preciomercadillopaninis=resultado.getInt("preciounidad");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return preciomercadillopaninis;
+	}	
+	
+	public int precioFabricaPaninis() {
+		int preciofabricapaninis = 0;
+		ResultSet resultado = Conexion.EjecutarSentencia("SELECT preciounidad FROM mejoras where nombremejora='Fabrica Paninis'");
+		try {
+			while(resultado.next()) {
+				preciofabricapaninis=resultado.getInt("preciounidad");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return preciofabricapaninis;
+	}	
+	
+	public int precioStandNoodles() {
+		int preciostandnoodles = 0;
+		ResultSet resultado = Conexion.EjecutarSentencia("SELECT preciounidad FROM mejoras where nombremejora='Stand Noodles'");
+		try {
+			while(resultado.next()) {
+				preciostandnoodles=resultado.getInt("preciounidad");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return preciostandnoodles;
+	}	
+	
+	public int precioVendedorNoodles() {
+		int preciovendedornoodles = 0;
+		ResultSet resultado = Conexion.EjecutarSentencia("SELECT preciounidad FROM mejoras where nombremejora='Vendedor Noodles'");
+		try {
+			while(resultado.next()) {
+				preciovendedornoodles=resultado.getInt("preciounidad");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return preciovendedornoodles;
+	}	
+	
+	public int precioSupermercadoNoodles() {
+		int preciosupermercadonoodles = 0;
+		ResultSet resultado = Conexion.EjecutarSentencia("SELECT preciounidad FROM mejoras where nombremejora='Supermercado Noodles'");
+		try {
+			while(resultado.next()) {
+				preciosupermercadonoodles=resultado.getInt("preciounidad");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return preciosupermercadonoodles;
+	}	
+	
+	public int precioMercadilloNoodles() {
+		int preciomercadillonoodles = 0;
+		ResultSet resultado = Conexion.EjecutarSentencia("SELECT preciounidad FROM mejoras where nombremejora='Mercadillo Noodles'");
+		try {
+			while(resultado.next()) {
+				preciomercadillonoodles=resultado.getInt("preciounidad");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return preciomercadillonoodles;
+	}	
+	
+	public int precioFabricaNoodles() {
+		int preciofabricanoodles = 0;
+		ResultSet resultado = Conexion.EjecutarSentencia("SELECT preciounidad FROM mejoras where nombremejora='Fabrica Noodles'");
+		try {
+			while(resultado.next()) {
+				preciofabricanoodles=resultado.getInt("preciounidad");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return preciofabricanoodles;
+	}	
 }

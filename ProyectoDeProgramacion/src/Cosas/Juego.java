@@ -14,6 +14,8 @@ import java.awt.Font;
 import javax.swing.SwingConstants;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.util.Timer;
+import java.util.TimerTask;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
@@ -21,7 +23,7 @@ public class Juego extends JFrame {
 	
 	private JPanel contentPane;
 	private Partida partida;
-		
+	private static JTextPane textPane;
 
 	/**
 	 * Create the frame.
@@ -82,7 +84,7 @@ public class Juego extends JFrame {
 		btnMejoras.setBounds(43, 268, 89, 23);
 		panel.add(btnMejoras);
 		
-		JTextPane textPane = new JTextPane();
+		textPane = new JTextPane();
 		textPane.setFont(new Font("Tahoma", Font.PLAIN, 10));
 		textPane.setEditable(false);
 		textPane.setBackground(Color.WHITE);
@@ -253,5 +255,22 @@ public class Juego extends JFrame {
 		btnExportar.setBackground(Color.WHITE);
 		btnExportar.setBounds(480, 236, 89, 23);
 		panel.add(btnExportar);
+		
+		new Timer().scheduleAtFixedRate(new TimerTask(){
+		    @Override
+		    public void run(){
+		       textPane.setText(partida.getDinero()+"");
+		    }
+		},0,100);
+		
+		new Timer().scheduleAtFixedRate(new TimerTask(){
+		    @Override
+		    public void run(){
+		    partida.setTiempototal(partida.getTiempototal()+1);
+		    textPane_4.setText(Integer.toString(partida.getTiempototal()+1));
+		      
+		    }
+		},0,1000);
 	}
+	
 }
