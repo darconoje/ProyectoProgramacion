@@ -350,10 +350,10 @@ public class Partida {
 	
 	public int obtenerDineroPorClickGalletita() {
 		int dineroporclickgalletita = 0;
-		ResultSet resultado = Conexion.EjecutarSentencia("SELECT dineroporclic FROM productos where nombreproducto='Galletita'");
+		ResultSet resultado = Conexion.EjecutarSentencia("SELECT dineroporclick FROM productos where nombreproducto='Galletita'");
 		try {
 			while(resultado.next()) {
-				dineroporclickgalletita=resultado.getInt("dineroporclic");
+				dineroporclickgalletita=resultado.getInt("dineroporclick");
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -363,10 +363,10 @@ public class Partida {
 	
 	public int obtenerDineroPorClickPizza() {
 		int dineroporclickpizza = 0;
-		ResultSet resultado = Conexion.EjecutarSentencia("SELECT dineroporclic FROM productos where nombreproducto='Pizza Napolitana'");
+		ResultSet resultado = Conexion.EjecutarSentencia("SELECT dineroporclick FROM productos where nombreproducto='Pizza Napolitana'");
 		try {
 			while(resultado.next()) {
-				dineroporclickpizza=resultado.getInt("dineroporclic");
+				dineroporclickpizza=resultado.getInt("dineroporclick");
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -376,10 +376,10 @@ public class Partida {
 	
 	public int obtenerDineroPorClickPanini() {
 		int dineroporclickpanini = 0;
-		ResultSet resultado = Conexion.EjecutarSentencia("SELECT dineroporclic FROM productos where nombreproducto='Panini del Polvillo'");
+		ResultSet resultado = Conexion.EjecutarSentencia("SELECT dineroporclick FROM productos where nombreproducto='Panini del Polvillo'");
 		try {
 			while(resultado.next()) {
-				dineroporclickpanini=resultado.getInt("dineroporclic");
+				dineroporclickpanini=resultado.getInt("dineroporclick");
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -389,10 +389,10 @@ public class Partida {
 	
 	public int obtenerDineroPorClickNoodles() {
 		int dineroporclicknoodles = 0;
-		ResultSet resultado = Conexion.EjecutarSentencia("SELECT dineroporclic FROM productos where nombreproducto='Golden Noodles'");
+		ResultSet resultado = Conexion.EjecutarSentencia("SELECT dineroporclick FROM productos where nombreproducto='Golden Noodles'");
 		try {
 			while(resultado.next()) {
-				dineroporclicknoodles=resultado.getInt("dineroporclic");
+				dineroporclicknoodles=resultado.getInt("dineroporclick");
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
