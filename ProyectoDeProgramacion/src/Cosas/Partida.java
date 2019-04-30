@@ -9,7 +9,6 @@ public class Partida {
 	private String usuario;
 	private int dinero;
 	private int puntuaciontotal;
-	private int dineroporsegundo;
 	private int tiempototal;
 	private int standgalletitas;
 	private int vendedorgalletitas;
@@ -54,14 +53,6 @@ public class Partida {
 	
 	public void setPuntuaciontotal(int puntuaciontotal) {
 		this.puntuaciontotal = puntuaciontotal;
-	}
-	
-	public int getDineroporsegundo() {
-		return dineroporsegundo;
-	}
-	
-	public void setDineroporsegundo(int dineroporsegundo) {
-		this.dineroporsegundo = dineroporsegundo;
 	}
 	
 	public int getTiempototal() {
@@ -236,7 +227,7 @@ public class Partida {
 		
 	}
 	
-	public Partida(String usuario, int dinero, int puntuaciontotal, int dineroporsegundo, int tiempototal, int standgalletitas,
+	public Partida(String usuario, int dinero, int puntuaciontotal, int tiempototal, int standgalletitas,
 			int vendedorgalletitas, int supermercadogalletitas, int mercadillogalletitas, int fabricagalletitas,
 			int standpizza, int vendedorpizza, int supermercadopizza, int mercadillopizza, int fabricapizza,
 			int standpanini, int vendedorpanini, int supermercadopanini, int mercadillopanini, int fabricapanini,
@@ -244,7 +235,6 @@ public class Partida {
 		this.usuario = usuario;
 		this.dinero = dinero;
 		this.puntuaciontotal = puntuaciontotal;
-		this.dineroporsegundo = dineroporsegundo;
 		this.tiempototal = tiempototal;
 		this.standgalletitas = standgalletitas;
 		this.vendedorgalletitas = vendedorgalletitas;
@@ -295,7 +285,6 @@ public class Partida {
 		String nombre = bbddusuarios.obtenerUsuarioPartida(usuario);
 		int dinero = bbddusuarios.obtenerDinero(usuario);
 		int puntuaciontotal = bbddusuarios.obtenerPuntuacionTotal(usuario);
-		int dineroporsegundo = dineroPorSegundo();
 		int tiempototal = bbddusuarios.obtenerTiempoTotal(usuario);
 		int standgalletitas = bbddusuarios.obtenerStandGalletitas(usuario);
 		int vendedorgalletitas = bbddusuarios.obtenerVendedorGalletitas(usuario);
@@ -318,7 +307,7 @@ public class Partida {
 		int mercadillonoodles = bbddusuarios.obtenerMercadilloNoodles(usuario);
 		int fabricanoodles = bbddusuarios.obtenerFabricaNoodles(usuario);
 
-		Partida partida = new Partida(nombre,dinero,puntuaciontotal,dineroporsegundo,tiempototal,standgalletitas,vendedorgalletitas,supermercadogalletitas,mercadillogalletitas,fabricagalletitas,standpizzas,vendedorpizzas,supermercadopizzas,mercadillopizzas,fabricapizzas,standpaninis,vendedorpaninis,supermercadopaninis,mercadillopaninis,fabricapaninis,standnoodles,vendedornoodles,supermercadonoodles,mercadillonoodles,fabricanoodles);
+		Partida partida = new Partida(nombre,dinero,puntuaciontotal,tiempototal,standgalletitas,vendedorgalletitas,supermercadogalletitas,mercadillogalletitas,fabricagalletitas,standpizzas,vendedorpizzas,supermercadopizzas,mercadillopizzas,fabricapizzas,standpaninis,vendedorpaninis,supermercadopaninis,mercadillopaninis,fabricapaninis,standnoodles,vendedornoodles,supermercadonoodles,mercadillonoodles,fabricanoodles);
 		return partida;
 	}
 	
