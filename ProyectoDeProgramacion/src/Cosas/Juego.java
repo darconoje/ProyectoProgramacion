@@ -220,7 +220,7 @@ public class Juego extends JFrame {
 		textPane_3.setEditable(false);
 		textPane_3.setBackground(Color.WHITE);
 		textPane_3.setBounds(471, 64, 101, 14);
-		textPane_3.setText(Integer.toString(partida.getDineroporsegundo()));
+		textPane_3.setText(Integer.toString(partida.obtenerDineroPorSegundo()));
 		panel.add(textPane_3);
 		
 		JTextPane textPane_4 = new JTextPane();

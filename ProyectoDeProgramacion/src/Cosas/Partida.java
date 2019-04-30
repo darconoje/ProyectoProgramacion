@@ -635,4 +635,9 @@ public class Partida {
 		}
 		return preciofabricanoodles;
 	}	
+	
+	public int obtenerDineroPorSegundo() {
+		int dineroporsegundo=(this.standgalletitas*1*obtenerDineroPorClickGalletita())+(this.vendedorgalletitas*10*obtenerDineroPorClickGalletita())+(this.supermercadogalletitas*25*obtenerDineroPorClickGalletita())+(this.mercadillogalletitas*50*obtenerDineroPorClickGalletita())+(this.fabricagalletitas*100*obtenerDineroPorClickGalletita())+(this.standpizza*1*obtenerDineroPorClickPizza())+(this.vendedorpizza*10*obtenerDineroPorClickPizza())+(this.supermercadopizza*25*obtenerDineroPorClickPizza())+(this.mercadillopizza*50*obtenerDineroPorClickPizza())+(this.fabricapizza*100*obtenerDineroPorClickPizza())+(this.standpanini*1*obtenerDineroPorClickPanini())+(this.vendedorpanini*10*obtenerDineroPorClickPanini())+(this.supermercadopizza*25*obtenerDineroPorClickPizza())+(this.mercadillopizza*50*obtenerDineroPorClickPizza())+(this.fabricapizza*100*obtenerDineroPorClickPizza())+(this.standnoodles*1*obtenerDineroPorClickNoodles())+(this.vendedornoodles*10*obtenerDineroPorClickNoodles())+(this.supermercadonoodles*25*obtenerDineroPorClickNoodles())+(this.mercadillonoodles*50*obtenerDineroPorClickNoodles())+(this.fabricanoodles*100*obtenerDineroPorClickNoodles());
+		return dineroporsegundo;
+	}
 }
