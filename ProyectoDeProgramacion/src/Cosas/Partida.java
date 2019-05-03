@@ -337,7 +337,7 @@ public class Partida {
 		Conexion.EjecutarUpdate("UPDATE partidasusuario SET fabricanoodles = "+partida.getFabricanoodles()+" WHERE nombreusuario = '"+partida.getUsuario()+"' ");
 	}
 	
-	public int obtenerDineroPorClickGalletita() {
+	/*public int obtenerDineroPorClickGalletita() {
 		int dineroporclickgalletita = 0;
 		ResultSet resultado = Conexion.EjecutarSentencia("SELECT dineroporclick FROM productos where nombreproducto='Galletita'");
 		try {
@@ -388,6 +388,7 @@ public class Partida {
 		}
 		return dineroporclicknoodles;
 	}
+	*/
 	
 	public int precioStandGalletitas() {
 		int preciostandgalletitas = 0;
@@ -637,7 +638,7 @@ public class Partida {
 	}	
 	
 	public int obtenerDineroPorSegundo() {
-		int dineroporsegundo=(this.standgalletitas*1*obtenerDineroPorClickGalletita())+(this.vendedorgalletitas*10*obtenerDineroPorClickGalletita())+(this.supermercadogalletitas*25*obtenerDineroPorClickGalletita())+(this.mercadillogalletitas*50*obtenerDineroPorClickGalletita())+(this.fabricagalletitas*100*obtenerDineroPorClickGalletita())+(this.standpizza*1*obtenerDineroPorClickPizza())+(this.vendedorpizza*10*obtenerDineroPorClickPizza())+(this.supermercadopizza*25*obtenerDineroPorClickPizza())+(this.mercadillopizza*50*obtenerDineroPorClickPizza())+(this.fabricapizza*100*obtenerDineroPorClickPizza())+(this.standpanini*1*obtenerDineroPorClickPanini())+(this.vendedorpanini*10*obtenerDineroPorClickPanini())+(this.supermercadopizza*25*obtenerDineroPorClickPizza())+(this.mercadillopizza*50*obtenerDineroPorClickPizza())+(this.fabricapizza*100*obtenerDineroPorClickPizza())+(this.standnoodles*1*obtenerDineroPorClickNoodles())+(this.vendedornoodles*10*obtenerDineroPorClickNoodles())+(this.supermercadonoodles*25*obtenerDineroPorClickNoodles())+(this.mercadillonoodles*50*obtenerDineroPorClickNoodles())+(this.fabricanoodles*100*obtenerDineroPorClickNoodles());
+		int dineroporsegundo=((getStandgalletitas()*1*1)+(getVendedorgalletitas()*10*1)+(getSupermercadogalletitas()*25*1)+(getMercadillogalletitas()*50*1)+(getFabricagalletitas()*100*1)+(getStandpizza()*1*25)+(getVendedorpizza()*10*25)+(getSupermercadopizza()*25*25)+(getMercadillopizza()*50*25)+(getFabricapizza()*100*25)+(getStandpanini()*1*100)+(getVendedorpanini()*10*100)+(getSupermercadopanini()*25*100)+(getMercadillopanini()*50*100)+(getFabricapanini()*100*100)+(getStandnoodles()*1*500)+(getVendedornoodles()*10*500)+(getSupermercadonoodles()*25*500)+(getMercadillonoodles()*50*500)+(getFabricanoodles()*100*500));
 		return dineroporsegundo;
 	}
 }

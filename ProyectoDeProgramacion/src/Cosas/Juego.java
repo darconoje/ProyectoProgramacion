@@ -104,8 +104,8 @@ public class Juego extends JFrame {
 		btnNewButton_1.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
-				int dinero = partida.getDinero()+partida.obtenerDineroPorClickGalletita();
-				int puntuaciontotal = partida.getPuntuaciontotal()+partida.obtenerDineroPorClickGalletita();
+				int dinero = partida.getDinero()+1;
+				int puntuaciontotal = partida.getPuntuaciontotal()+1;
 				partida.setDinero(dinero);
 				textPane.setText(Integer.toString(dinero));
 				partida.setPuntuaciontotal(puntuaciontotal);
@@ -129,8 +129,8 @@ public class Juego extends JFrame {
 			button_1.addMouseListener(new MouseAdapter() {
 				@Override
 				public void mouseClicked(MouseEvent arg0) {
-					int dinero = partida.getDinero()+partida.obtenerDineroPorClickPanini();
-					int puntuaciontotal = partida.getPuntuaciontotal()+partida.obtenerDineroPorClickPanini();
+					int dinero = partida.getDinero()+100;
+					int puntuaciontotal = partida.getPuntuaciontotal()+100;
 					partida.setDinero(dinero);
 					textPane.setText(Integer.toString(dinero));
 					partida.setPuntuaciontotal(puntuaciontotal);
@@ -151,8 +151,8 @@ public class Juego extends JFrame {
 			button_2.addMouseListener(new MouseAdapter() {
 				@Override
 				public void mouseClicked(MouseEvent arg0) {
-					int dinero = partida.getDinero()+partida.obtenerDineroPorClickNoodles();
-					int puntuaciontotal = partida.getPuntuaciontotal()+partida.obtenerDineroPorClickNoodles();
+					int dinero = partida.getDinero()+500;
+					int puntuaciontotal = partida.getPuntuaciontotal()+500;
 					partida.setDinero(dinero);
 					textPane.setText(Integer.toString(dinero));
 					partida.setPuntuaciontotal(puntuaciontotal);
@@ -195,8 +195,8 @@ public class Juego extends JFrame {
 			button.addMouseListener(new MouseAdapter() {
 				@Override
 				public void mouseClicked(MouseEvent arg0) {
-					int dinero = partida.getDinero()+partida.obtenerDineroPorClickPizza();
-					int puntuaciontotal = partida.getPuntuaciontotal()+partida.obtenerDineroPorClickPizza();
+					int dinero = partida.getDinero()+25;
+					int puntuaciontotal = partida.getPuntuaciontotal()+25;
 					partida.setDinero(dinero);
 					textPane.setText(Integer.toString(dinero));
 					partida.setPuntuaciontotal(puntuaciontotal);
@@ -220,7 +220,7 @@ public class Juego extends JFrame {
 		textPane_3.setEditable(false);
 		textPane_3.setBackground(Color.WHITE);
 		textPane_3.setBounds(471, 64, 101, 14);
-		textPane_3.setText(Integer.toString(partida.obtenerDineroPorSegundo()));
+
 		panel.add(textPane_3);
 		
 		JTextPane textPane_4 = new JTextPane();
@@ -260,6 +260,7 @@ public class Juego extends JFrame {
 		    @Override
 		    public void run(){
 		       textPane.setText(partida.getDinero()+"");
+				textPane_3.setText(Integer.toString(partida.obtenerDineroPorSegundo()));
 		    }
 		},0,100);
 		
@@ -269,6 +270,14 @@ public class Juego extends JFrame {
 		    partida.setTiempototal(partida.getTiempototal()+1);
 		    textPane_4.setText(Integer.toString(partida.getTiempototal()+1));
 		      
+		    }
+		},0,1000);
+		
+		new Timer().scheduleAtFixedRate(new TimerTask(){
+		    @Override
+		    public void run(){
+
+				partida.setDinero(partida.getDinero()+partida.obtenerDineroPorSegundo());
 		    }
 		},0,1000);
 	}

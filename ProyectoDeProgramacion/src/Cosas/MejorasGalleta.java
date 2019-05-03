@@ -16,7 +16,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 public class MejorasGalleta extends JFrame {
-
+	
 	private JPanel contentPane;
 
 
@@ -118,6 +118,7 @@ public class MejorasGalleta extends JFrame {
 					textPane.setText(Integer.toString(standgalletitas));
 					partida.setDinero(partida.getDinero()-partida.precioStandGalletitas()*1);
 				}
+
 			});
 		}
 		contentPane.add(btnX);
@@ -146,7 +147,7 @@ public class MejorasGalleta extends JFrame {
 		btnX_2.setFont(new Font("Tahoma", Font.PLAIN, 9));
 		btnX_2.setBounds(282, 33, 60, 23);
 		if(partida.getDinero()<partida.precioStandGalletitas()*100) {
-			btnX.setEnabled(false);
+			btnX_2.setEnabled(false);
 		}else {
 			btnX_2.addMouseListener(new MouseAdapter() {
 				@Override
@@ -164,7 +165,8 @@ public class MejorasGalleta extends JFrame {
 		button.setBackground(Color.WHITE);
 		button.setFont(new Font("Tahoma", Font.PLAIN, 9));
 		button.setBounds(144, 59, 60, 23);
-		if(partida.getDinero()<partida.precioVendedorGalletitas()*1) {
+		int dineroactual = partida.getDinero();
+		if(dineroactual<partida.precioVendedorGalletitas()*1) {
 			button.setEnabled(false);
 		}else {
 			button.addMouseListener(new MouseAdapter() {
@@ -176,6 +178,7 @@ public class MejorasGalleta extends JFrame {
 					partida.setDinero(partida.getDinero()-partida.precioVendedorGalletitas()*1);
 				}
 			});
+			dineroactual = dineroactual-partida.precioVendedorGalletitas()*1;
 		}
 		contentPane.add(button);
 		
@@ -389,3 +392,4 @@ public class MejorasGalleta extends JFrame {
 		contentPane.add(button_11);
 	}
 }
+
