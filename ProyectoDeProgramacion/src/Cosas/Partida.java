@@ -641,4 +641,15 @@ public class Partida {
 		int dineroporsegundo=((getStandgalletitas()*1*1)+(getVendedorgalletitas()*10*1)+(getSupermercadogalletitas()*25*1)+(getMercadillogalletitas()*50*1)+(getFabricagalletitas()*100*1)+(getStandpizza()*1*25)+(getVendedorpizza()*10*25)+(getSupermercadopizza()*25*25)+(getMercadillopizza()*50*25)+(getFabricapizza()*100*25)+(getStandpanini()*1*100)+(getVendedorpanini()*10*100)+(getSupermercadopanini()*25*100)+(getMercadillopanini()*50*100)+(getFabricapanini()*100*100)+(getStandnoodles()*1*500)+(getVendedornoodles()*10*500)+(getSupermercadonoodles()*25*500)+(getMercadillonoodles()*50*500)+(getFabricanoodles()*100*500));
 		return dineroporsegundo;
 	}
+
+	public void addGSCElistener(GSCEbutton gButton) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	remove
+	
+	fire
+	
+	
 }

@@ -189,6 +189,22 @@ public class Juego extends JFrame {
 		lblNoodles.setBounds(471, 211, 102, 14);
 		panel.add(lblNoodles);
 		
+		GSCEbutton gButton = new GSCEbutton("") {
+
+			private static final long serialVersionUID = -8487532229142591136L;
+
+			@Override
+			public void handleGSCE(GSCE ev) {
+				if(((Partida) ev.getSource()).getPuntuaciontotal()>1000) {
+					this.setEnabled(true);
+				}else {
+					this.setEnabled(false);
+				}
+			}
+		};
+		
+		partida.addGSCElistener(gButton);
+		
 		JButton button = new JButton("");
 		if(partida.getPuntuaciontotal()>1000) {
 			button.setEnabled(true);
@@ -260,7 +276,8 @@ public class Juego extends JFrame {
 		    @Override
 		    public void run(){
 		       textPane.setText(partida.getDinero()+"");
-				textPane_3.setText(Integer.toString(partida.obtenerDineroPorSegundo()));
+		       textPane_1.setText(partida.getPuntuaciontotal()+"");
+		       textPane_3.setText(Integer.toString(partida.obtenerDineroPorSegundo()));
 		    }
 		},0,100);
 		
@@ -269,14 +286,13 @@ public class Juego extends JFrame {
 		    public void run(){
 		    partida.setTiempototal(partida.getTiempototal()+1);
 		    textPane_4.setText(Integer.toString(partida.getTiempototal()+1));
-		      
 		    }
 		},0,1000);
 		
 		new Timer().scheduleAtFixedRate(new TimerTask(){
 		    @Override
 		    public void run(){
-
+		    	partida.setPuntuaciontotal(partida.getPuntuaciontotal()+partida.obtenerDineroPorSegundo());
 				partida.setDinero(partida.getDinero()+partida.obtenerDineroPorSegundo());
 		    }
 		},0,1000);

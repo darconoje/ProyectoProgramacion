@@ -14,6 +14,8 @@ import javax.swing.SwingConstants;
 import java.awt.Color;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class MejorasGalleta extends JFrame {
 	
@@ -24,6 +26,9 @@ public class MejorasGalleta extends JFrame {
 	 * Create the frame.
 	 */
 	public MejorasGalleta(Partida partida) {
+		
+
+		
 		setTitle("MEJORAS");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 425, 250);
@@ -165,8 +170,7 @@ public class MejorasGalleta extends JFrame {
 		button.setBackground(Color.WHITE);
 		button.setFont(new Font("Tahoma", Font.PLAIN, 9));
 		button.setBounds(144, 59, 60, 23);
-		int dineroactual = partida.getDinero();
-		if(dineroactual<partida.precioVendedorGalletitas()*1) {
+		if(partida.getDinero()<partida.precioVendedorGalletitas()*1) {
 			button.setEnabled(false);
 		}else {
 			button.addMouseListener(new MouseAdapter() {
@@ -178,7 +182,6 @@ public class MejorasGalleta extends JFrame {
 					partida.setDinero(partida.getDinero()-partida.precioVendedorGalletitas()*1);
 				}
 			});
-			dineroactual = dineroactual-partida.precioVendedorGalletitas()*1;
 		}
 		contentPane.add(button);
 		
@@ -390,6 +393,7 @@ public class MejorasGalleta extends JFrame {
 			});
 		}
 		contentPane.add(button_11);
+		
 	}
 }
 

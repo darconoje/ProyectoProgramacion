@@ -11,7 +11,8 @@ package Cosas;
 		
 		static String timeZone = "?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
 		static String dbName="proyectoprogramacion";
-		static String url="jdbc:mysql://localhost:3307/"+dbName+timeZone;
+		//3307
+		static String url="jdbc:mysql://localhost:3306/"+dbName+timeZone;
 		static String user = "root";
 		static String pass = "manolo";
 
