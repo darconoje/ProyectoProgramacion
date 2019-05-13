@@ -17,7 +17,7 @@ public class MejorasPrevio extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public MejorasPrevio(Partida partida) {
+	public MejorasPrevio(Partida partida, MejorasGalleta galleta) {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 150, 225);
 		contentPane = new JPanel();
@@ -30,8 +30,8 @@ public class MejorasPrevio extends JFrame {
 		btnNewButton.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				MejorasGalleta mejorasgalleta = new MejorasGalleta(partida);
-				mejorasgalleta.setVisible(true);
+				//MejorasGalleta mejorasgalleta = new MejorasGalleta(partida);
+				galleta.setVisible(true);
 			}
 		});
 		btnNewButton.setBounds(23, 11, 89, 23);

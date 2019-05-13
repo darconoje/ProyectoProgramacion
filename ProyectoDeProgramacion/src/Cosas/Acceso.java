@@ -28,22 +28,6 @@ public class Acceso extends JFrame {
 	private JLabel lblNewLabel;
 	private JButton btnRegistrarse;
 	
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		Conexion.Conectar();
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					Acceso frame = new Acceso();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
 
 	/**
 	 * Create the frame.
