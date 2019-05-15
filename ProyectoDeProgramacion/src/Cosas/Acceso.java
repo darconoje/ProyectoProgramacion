@@ -20,7 +20,6 @@ import java.awt.event.ActionEvent;
 
 public class Acceso extends JFrame {
 	
-	//private String usuario;
 	private JPanel contentPane;
 	private JTextField textField;
 	private JButton btnLogin;
