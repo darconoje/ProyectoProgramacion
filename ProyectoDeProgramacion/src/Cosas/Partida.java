@@ -507,6 +507,19 @@ public class Partida {
 		return preciomercadillopizzas;
 	}	
 	
+	public int precioFabricaPizzas() {
+		int preciofabricapizzas = 0;
+		ResultSet resultado = Conexion.EjecutarSentencia("SELECT preciounidad FROM mejoras where nombremejora='Fabrica Pizzas'");
+		try {
+			while(resultado.next()) {
+				preciofabricapizzas=resultado.getInt("preciounidad");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return preciofabricapizzas;
+	}	
+	
 	public int precioStandPaninis() {
 		int preciostandpaninis = 0;
 		ResultSet resultado = Conexion.EjecutarSentencia("SELECT preciounidad FROM mejoras where nombremejora='Stand Paninis'");
