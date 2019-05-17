@@ -124,7 +124,6 @@ public class MejorasPizza extends JFrame {
 					}
 				}
 		});			
-
 		btnX.setBackground(Color.WHITE);
 		btnX.setFont(new Font("Tahoma", Font.PLAIN, 9));
 		btnX.setBounds(144, 33, 60, 23);

@@ -30,6 +30,26 @@ public class Partida {
 	private int supermercadonoodles;
 	private int mercadillonoodles;
 	private int fabricanoodles;
+	private int preciostandgalletitas;
+	private int preciovendedorgalletitas;
+	private int preciosupermercadogalletitas;
+	private int preciomercadillogalletitas;
+	private int preciofabricagalletitas;
+	private int preciostandpizza;
+	private int preciovendedorpizza;
+	private int preciosupermercadopizza;
+	private int preciomercadillopizza;
+	private int preciofabricapizza;
+	private int preciostandpanini;
+	private int preciovendedorpanini;
+	private int preciosupermercadopanini;
+	private int preciomercadillopanini;
+	private int preciofabricapanini;
+	private int preciostandnoodles;
+	private int preciovendedornoodles;
+	private int preciosupermercadonoodles;
+	private int preciomercadillonoodles;
+	private int preciofabricanoodles;
 	
 	public String getUsuario() {
 		return usuario;
@@ -223,6 +243,166 @@ public class Partida {
 		this.fabricanoodles = fabricanoodles;
 	}
 	
+	public int getPreciostandgalletitas() {
+		return preciostandgalletitas;
+	}
+
+	public void setPreciostandgalletitas(int preciostandgalletitas) {
+		this.preciostandgalletitas = preciostandgalletitas;
+	}
+
+	public int getPreciovendedorgalletitas() {
+		return preciovendedorgalletitas;
+	}
+
+	public void setPreciovendedorgalletitas(int preciovendedorgalletitas) {
+		this.preciovendedorgalletitas = preciovendedorgalletitas;
+	}
+
+	public int getPreciosupermercadogalletitas() {
+		return preciosupermercadogalletitas;
+	}
+
+	public void setPreciosupermercadogalletitas(int preciosupermercadogalletitas) {
+		this.preciosupermercadogalletitas = preciosupermercadogalletitas;
+	}
+
+	public int getPreciomercadillogalletitas() {
+		return preciomercadillogalletitas;
+	}
+
+	public void setPreciomercadillogalletitas(int preciomercadillogalletitas) {
+		this.preciomercadillogalletitas = preciomercadillogalletitas;
+	}
+
+	public int getPreciofabricagalletitas() {
+		return preciofabricagalletitas;
+	}
+
+	public void setPreciofabricagalletitas(int preciofabricagalletitas) {
+		this.preciofabricagalletitas = preciofabricagalletitas;
+	}
+
+	public int getPreciostandpizza() {
+		return preciostandpizza;
+	}
+
+	public void setPreciostandpizza(int preciostandpizza) {
+		this.preciostandpizza = preciostandpizza;
+	}
+
+	public int getPreciovendedorpizza() {
+		return preciovendedorpizza;
+	}
+
+	public void setPreciovendedorpizza(int preciovendedorpizza) {
+		this.preciovendedorpizza = preciovendedorpizza;
+	}
+
+	public int getPreciosupermercadopizza() {
+		return preciosupermercadopizza;
+	}
+
+	public void setPreciosupermercadopizza(int preciosupermercadopizza) {
+		this.preciosupermercadopizza = preciosupermercadopizza;
+	}
+
+	public int getPreciomercadillopizza() {
+		return preciomercadillopizza;
+	}
+
+	public void setPreciomercadillopizza(int preciomercadillopizza) {
+		this.preciomercadillopizza = preciomercadillopizza;
+	}
+
+	public int getPreciofabricapizza() {
+		return preciofabricapizza;
+	}
+
+	public void setPreciofabricapizza(int preciofabricapizza) {
+		this.preciofabricapizza = preciofabricapizza;
+	}
+
+	public int getPreciostandpanini() {
+		return preciostandpanini;
+	}
+
+	public void setPreciostandpanini(int preciostandpanini) {
+		this.preciostandpanini = preciostandpanini;
+	}
+
+	public int getPreciovendedorpanini() {
+		return preciovendedorpanini;
+	}
+
+	public void setPreciovendedorpanini(int preciovendedorpanini) {
+		this.preciovendedorpanini = preciovendedorpanini;
+	}
+
+	public int getPreciosupermercadopanini() {
+		return preciosupermercadopanini;
+	}
+
+	public void setPreciosupermercadopanini(int preciosupermercadopanini) {
+		this.preciosupermercadopanini = preciosupermercadopanini;
+	}
+
+	public int getPreciomercadillopanini() {
+		return preciomercadillopanini;
+	}
+
+	public void setPreciomercadillopanini(int preciomercadillopanini) {
+		this.preciomercadillopanini = preciomercadillopanini;
+	}
+
+	public int getPreciofabricapanini() {
+		return preciofabricapanini;
+	}
+
+	public void setPreciofabricapanini(int preciofabricapanini) {
+		this.preciofabricapanini = preciofabricapanini;
+	}
+
+	public int getPreciostandnoodles() {
+		return preciostandnoodles;
+	}
+
+	public void setPreciostandnoodles(int preciostandnoodles) {
+		this.preciostandnoodles = preciostandnoodles;
+	}
+
+	public int getPreciovendedornoodles() {
+		return preciovendedornoodles;
+	}
+
+	public void setPreciovendedornoodles(int preciovendedornoodles) {
+		this.preciovendedornoodles = preciovendedornoodles;
+	}
+
+	public int getPreciosupermercadonoodles() {
+		return preciosupermercadonoodles;
+	}
+
+	public void setPreciosupermercadonoodles(int preciosupermercadonoodles) {
+		this.preciosupermercadonoodles = preciosupermercadonoodles;
+	}
+
+	public int getPreciomercadillonoodles() {
+		return preciomercadillonoodles;
+	}
+
+	public void setPreciomercadillonoodles(int preciomercadillonoodles) {
+		this.preciomercadillonoodles = preciomercadillonoodles;
+	}
+
+	public int getPreciofabricanoodles() {
+		return preciofabricanoodles;
+	}
+
+	public void setPreciofabricanoodles(int preciofabricanoodles) {
+		this.preciofabricanoodles = preciofabricanoodles;
+	}
+	
 	public Partida() {
 		
 	}
@@ -231,7 +411,13 @@ public class Partida {
 			int vendedorgalletitas, int supermercadogalletitas, int mercadillogalletitas, int fabricagalletitas,
 			int standpizza, int vendedorpizza, int supermercadopizza, int mercadillopizza, int fabricapizza,
 			int standpanini, int vendedorpanini, int supermercadopanini, int mercadillopanini, int fabricapanini,
-			int standnoodles, int vendedornoodles, int supermercadonoodles, int mercadillonoodles, int fabricanoodles) {
+			int standnoodles, int vendedornoodles, int supermercadonoodles, int mercadillonoodles, int fabricanoodles,
+			int preciostandgalletitas, int preciovendedorgalletitas, int preciosupermercadogalletitas,
+			int preciomercadillogalletitas, int preciofabricagalletitas, int preciostandpizza, int preciovendedorpizza,
+			int preciosupermercadopizza, int preciomercadillopizza, int preciofabricapizza, int preciostandpanini,
+			int preciovendedorpanini, int preciosupermercadopanini, int preciomercadillopanini, int preciofabricapanini,
+			int preciostandnoodles, int preciovendedornoodles, int preciosupermercadonoodles,
+			int preciomercadillonoodles, int preciofabricanoodles) {
 		this.usuario = usuario;
 		this.dinero = dinero;
 		this.puntuaciontotal = puntuaciontotal;
@@ -256,8 +442,27 @@ public class Partida {
 		this.supermercadonoodles = supermercadonoodles;
 		this.mercadillonoodles = mercadillonoodles;
 		this.fabricanoodles = fabricanoodles;
+		this.preciostandgalletitas = preciostandgalletitas;
+		this.preciovendedorgalletitas = preciovendedorgalletitas;
+		this.preciosupermercadogalletitas = preciosupermercadogalletitas;
+		this.preciomercadillogalletitas = preciomercadillogalletitas;
+		this.preciofabricagalletitas = preciofabricagalletitas;
+		this.preciostandpizza = preciostandpizza;
+		this.preciovendedorpizza = preciovendedorpizza;
+		this.preciosupermercadopizza = preciosupermercadopizza;
+		this.preciomercadillopizza = preciomercadillopizza;
+		this.preciofabricapizza = preciofabricapizza;
+		this.preciostandpanini = preciostandpanini;
+		this.preciovendedorpanini = preciovendedorpanini;
+		this.preciosupermercadopanini = preciosupermercadopanini;
+		this.preciomercadillopanini = preciomercadillopanini;
+		this.preciofabricapanini = preciofabricapanini;
+		this.preciostandnoodles = preciostandnoodles;
+		this.preciovendedornoodles = preciovendedornoodles;
+		this.preciosupermercadonoodles = preciosupermercadonoodles;
+		this.preciomercadillonoodles = preciomercadillonoodles;
+		this.preciofabricanoodles = preciofabricanoodles;
 	}
-	
 	public boolean jugadorNuevo(String usuario) {
 		boolean nuevo = true;
 		UsuariosBBDD basedatos = new UsuariosBBDD();
@@ -306,11 +511,31 @@ public class Partida {
 		int supermercadonoodles = bbddusuarios.obtenerSupermercadoNoodles(usuario);
 		int mercadillonoodles = bbddusuarios.obtenerMercadilloNoodles(usuario);
 		int fabricanoodles = bbddusuarios.obtenerFabricaNoodles(usuario);
+		int preciostandgalletitas = precioStandGalletitas();
+		int preciovendedorgalletitas = precioVendedorGalletitas();
+		int preciosupermercadogalletitas = precioSupermercadoGalletitas();
+		int preciomercadillogalletitas = precioMercadilloGalletitas();
+		int preciofabricagalletitas = precioFabricaGalletitas();
+		int preciostandpizzas = precioStandPizzas();
+		int preciovendedorpizzas = precioVendedorPizzas();
+		int preciosupermercadopizzas = precioSupermercadoPizzas();
+		int preciomercadillopizzas = precioMercadilloPizzas();
+		int preciofabricapizzas = precioFabricaPizzas();
+		int preciostandpaninis = precioStandPaninis();
+		int preciovendedorpaninis = precioVendedorPaninis();
+		int preciosupermercadopaninis = precioSupermercadoPaninis();
+		int preciomercadillopaninis = precioMercadilloPaninis();
+		int preciofabricapaninis = precioFabricaPaninis();
+		int preciostandnoodles = precioStandNoodles();
+		int preciovendedornoodles = precioVendedorNoodles();
+		int preciosupermercadonoodles = precioSupermercadoNoodles();
+		int preciomercadillonoodles = precioMercadilloNoodles();
+		int preciofabricanoodles = precioFabricaNoodles();
 
-		Partida partida = new Partida(nombre,dinero,puntuaciontotal,tiempototal,standgalletitas,vendedorgalletitas,supermercadogalletitas,mercadillogalletitas,fabricagalletitas,standpizzas,vendedorpizzas,supermercadopizzas,mercadillopizzas,fabricapizzas,standpaninis,vendedorpaninis,supermercadopaninis,mercadillopaninis,fabricapaninis,standnoodles,vendedornoodles,supermercadonoodles,mercadillonoodles,fabricanoodles);
+		Partida partida = new Partida(nombre,dinero,puntuaciontotal,tiempototal,standgalletitas,vendedorgalletitas,supermercadogalletitas,mercadillogalletitas,fabricagalletitas,standpizzas,vendedorpizzas,supermercadopizzas,mercadillopizzas,fabricapizzas,standpaninis,vendedorpaninis,supermercadopaninis,mercadillopaninis,fabricapaninis,standnoodles,vendedornoodles,supermercadonoodles,mercadillonoodles,fabricanoodles,preciostandgalletitas,preciovendedorgalletitas,preciosupermercadogalletitas,preciomercadillogalletitas,preciofabricagalletitas,preciostandpizzas,preciovendedorpizzas,preciosupermercadopizzas,preciomercadillopizzas,preciofabricapizzas,preciostandpaninis,preciovendedorpaninis,preciosupermercadopaninis,preciomercadillopaninis,preciofabricapaninis,preciostandnoodles,preciovendedornoodles,preciosupermercadonoodles,preciomercadillonoodles,preciofabricanoodles);
 		return partida;
 	}
-	
+
 	public void guardarPartida(Partida partida) {
 		Conexion.EjecutarUpdate("UPDATE partidasusuario SET dinero = "+partida.getDinero()+" WHERE nombreusuario = '"+partida.getUsuario()+"' ");
 		Conexion.EjecutarUpdate("UPDATE partidasusuario SET puntuaciontotal = "+partida.getPuntuaciontotal()+" WHERE nombreusuario = '"+partida.getUsuario()+"' ");
@@ -390,6 +615,11 @@ public class Partida {
 	}
 	*/
 	
+	
+	/**
+	 * 
+	 * @return
+	 */
 	public int precioStandGalletitas() {
 		int preciostandgalletitas = 0;
 		ResultSet resultado = Conexion.EjecutarSentencia("SELECT preciounidad FROM mejoras where nombremejora='Stand Galletitas'");
@@ -654,4 +884,5 @@ public class Partida {
 		int dineroporsegundo=((getStandgalletitas()*1*1)+(getVendedorgalletitas()*10*1)+(getSupermercadogalletitas()*25*1)+(getMercadillogalletitas()*50*1)+(getFabricagalletitas()*100*1)+(getStandpizza()*1*25)+(getVendedorpizza()*10*25)+(getSupermercadopizza()*25*25)+(getMercadillopizza()*50*25)+(getFabricapizza()*100*25)+(getStandpanini()*1*100)+(getVendedorpanini()*10*100)+(getSupermercadopanini()*25*100)+(getMercadillopanini()*50*100)+(getFabricapanini()*100*100)+(getStandnoodles()*1*500)+(getVendedornoodles()*10*500)+(getSupermercadonoodles()*25*500)+(getMercadillonoodles()*50*500)+(getFabricanoodles()*100*500));
 		return dineroporsegundo;
 	}
+
 }
