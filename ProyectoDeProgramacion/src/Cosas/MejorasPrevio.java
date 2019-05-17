@@ -13,6 +13,7 @@ import java.awt.event.MouseEvent;
 public class MejorasPrevio extends JFrame {
 
 	private JPanel contentPane;
+	private JButton btnNewButton;
 
 	/**
 	 * Create the frame.
