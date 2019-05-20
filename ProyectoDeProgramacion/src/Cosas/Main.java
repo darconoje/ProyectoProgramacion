@@ -5,7 +5,7 @@ import java.awt.EventQueue;
 public class Main {
 	
 	/**
-	 * Launch the application.
+	 * Lanza la aplicacion ejecutando el jframe de la ventana de login
 	 */
 
 	public static void main(String[] args) {

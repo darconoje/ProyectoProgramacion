@@ -369,6 +369,17 @@ public class MejorasNoodles extends JFrame {
 		button_11.setFont(new Font("Tahoma", Font.PLAIN, 9));
 		button_11.setBounds(282, 134, 60, 23);
 		contentPane.add(button_11);
+		
+		new Timer().scheduleAtFixedRate(new TimerTask(){
+		    @Override
+		    public void run(){
+		    	textPane.setText(Integer.toString(partida.getStandnoodles()));
+		    	textPane_4.setText(Integer.toString(partida.getVendedornoodles()));
+		    	textPane_8.setText(Integer.toString(partida.getSupermercadonoodles()));
+		    	textPane_12.setText(Integer.toString(partida.getMercadillonoodles()));
+		    	textPane_16.setText(Integer.toString(partida.getFabricanoodles()));
+		    }
+		},0,100);
 	}
 	
 	public JButton getBtnX() {

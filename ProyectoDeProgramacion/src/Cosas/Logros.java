@@ -15,6 +15,8 @@ import javax.swing.JButton;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
+//Este jFrame esta sin desarrollar
+
 public class Logros extends JFrame {
 
 	private JPanel contentPane;

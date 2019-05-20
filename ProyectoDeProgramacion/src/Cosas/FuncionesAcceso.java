@@ -1,5 +1,10 @@
 package Cosas;
 
+/**
+ * La clase FuncionesAcceso contiene funciones referentes al login y registro de usuarios
+ * @author Dario
+ *
+ */
 
 public class FuncionesAcceso {
 

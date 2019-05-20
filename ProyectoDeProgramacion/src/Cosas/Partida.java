@@ -4,6 +4,12 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+/**
+ * La clase Partida recoge todas las variables que puedan existir en la partida, ademas de metodos y funciones para manipularlas
+ * @author Dario
+ *
+ */
+
 public class Partida {
 	
 	private String usuario;
@@ -463,6 +469,13 @@ public class Partida {
 		this.preciomercadillonoodles = preciomercadillonoodles;
 		this.preciofabricanoodles = preciofabricanoodles;
 	}
+	
+	/**
+	 * la funcion jugadorNuevo devuelve un booleano true si el nombre del usuario no se encuentra en la base de datos y false en el caso contrario
+	 * @param usuario
+	 * @return
+	 */
+	
 	public boolean jugadorNuevo(String usuario) {
 		boolean nuevo = true;
 		UsuariosBBDD basedatos = new UsuariosBBDD();
@@ -475,15 +488,22 @@ public class Partida {
 		return nuevo;
 	}
 	
+	/**
+	 * la funcion nuevaPartida realiza un insert en la tabla de partidas de la base de datos con el nombre de usuario y todas las variables a 0
+	 * @param usuario
+	 */
+	
 	public void nuevaPartida(String usuario) {
 		Conexion.EjecutarUpdate("INSERT INTO partidasusuario" + " (nombreusuario,puntuaciontotal,dinero,tiempototal,standgalletitas,vendedorgalletitas,supermercadogalletitas,mercadillogalletitas,fabricagalletitas,standpizzas,vendedorpizzas,supermercadopizzas,mercadillopizzas,fabricapizzas,standpaninis,vendedorpaninis,supermercadopaninis,mercadillopaninis,fabricapaninis,standnoodles,vendedornoodles,supermercadonoodles,mercadillonoodles,fabricanoodles) VALUES"+ " ('"+ usuario +"',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)");
 		cargarDatos(usuario);
 	}
 	
-	public int dineroPorSegundo() {
-		int dineroporsegundo = 0;
-		return dineroporsegundo;
-	}
+	/**
+	 * la funcion cargarDatos hace una llamada a las funciones de bbddusuarios con el fin de seleccionar las variables de la partida de la tabla
+	 * de partidas y asignarle a cada una de las variables del objeto partida el valor correspondiente 
+	 * @param usuario
+	 * @return
+	 */
 	
 	public Partida cargarDatos(String usuario) {
 		UsuariosBBDD bbddusuarios = new UsuariosBBDD();
@@ -536,6 +556,12 @@ public class Partida {
 		return partida;
 	}
 
+	/**
+	 * La fucnion guardarPartida actualiza la tabla de partidas del usuario actual en la base de datos con los valores de las variables que
+	 * el objeto tiene en ese momento
+	 * @param partida
+	 */
+	
 	public void guardarPartida(Partida partida) {
 		Conexion.EjecutarUpdate("UPDATE partidasusuario SET dinero = "+partida.getDinero()+" WHERE nombreusuario = '"+partida.getUsuario()+"' ");
 		Conexion.EjecutarUpdate("UPDATE partidasusuario SET puntuaciontotal = "+partida.getPuntuaciontotal()+" WHERE nombreusuario = '"+partida.getUsuario()+"' ");
@@ -616,10 +642,6 @@ public class Partida {
 	*/
 	
 	
-	/**
-	 * 
-	 * @return
-	 */
 	public int precioStandGalletitas() {
 		int preciostandgalletitas = 0;
 		ResultSet resultado = Conexion.EjecutarSentencia("SELECT preciounidad FROM mejoras where nombremejora='Stand Galletitas'");
@@ -879,6 +901,12 @@ public class Partida {
 		}
 		return preciofabricanoodles;
 	}	
+	
+	/**
+	 * la funcion obtenerDineroPorSegundo realiza las operaciones necesarias correspondientes a las mejoras para calcular el dinero que el
+	 * usuario gana por segundo
+	 * @return
+	 */
 	
 	public int obtenerDineroPorSegundo() {
 		int dineroporsegundo=((getStandgalletitas()*1*1)+(getVendedorgalletitas()*10*1)+(getSupermercadogalletitas()*25*1)+(getMercadillogalletitas()*50*1)+(getFabricagalletitas()*100*1)+(getStandpizza()*1*25)+(getVendedorpizza()*10*25)+(getSupermercadopizza()*25*25)+(getMercadillopizza()*50*25)+(getFabricapizza()*100*25)+(getStandpanini()*1*100)+(getVendedorpanini()*10*100)+(getSupermercadopanini()*25*100)+(getMercadillopanini()*50*100)+(getFabricapanini()*100*100)+(getStandnoodles()*1*500)+(getVendedornoodles()*10*500)+(getSupermercadonoodles()*25*500)+(getMercadillonoodles()*50*500)+(getFabricanoodles()*100*500));

@@ -369,6 +369,17 @@ public class MejorasPanini extends JFrame {
 		button_11.setFont(new Font("Tahoma", Font.PLAIN, 9));
 		button_11.setBounds(282, 134, 60, 23);
 		contentPane.add(button_11);
+		
+		new Timer().scheduleAtFixedRate(new TimerTask(){
+		    @Override
+		    public void run(){
+		    	textPane.setText(Integer.toString(partida.getStandpanini()));
+		    	textPane_4.setText(Integer.toString(partida.getVendedorpanini()));
+		    	textPane_8.setText(Integer.toString(partida.getSupermercadopanini()));
+		    	textPane_12.setText(Integer.toString(partida.getMercadillopanini()));
+		    	textPane_16.setText(Integer.toString(partida.getFabricapanini()));
+		    }
+		},0,100);
 	}
 	
 	public JButton getBtnX() {

@@ -11,7 +11,11 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 public class MejorasPrevio extends JFrame {
-
+	
+	private JButton btnNewButton;
+	private JButton btnNewButton_1;
+	private JButton btnNewButton_2;
+	private JButton btnNewButton_3;
 	private JPanel contentPane;
 	/**
 	 * Create the frame.
@@ -25,57 +29,53 @@ public class MejorasPrevio extends JFrame {
 		contentPane.setLayout(null);
 		setResizable(false);
 		
-		JButton btnNewButton = new JButton("Galletas");
+		this.btnNewButton = new JButton("Galletas");
 		btnNewButton.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				//MejorasGalleta mejorasgalleta = new MejorasGalleta(partida);
 				galleta.setVisible(true);
 			}
 		});
 		btnNewButton.setBounds(23, 11, 89, 23);
 		contentPane.add(btnNewButton);
 		
-		JButton btnNewButton_1 = new JButton("Pizzas");
-		if(partida.getPuntuaciontotal()>=1000) {
+		this.btnNewButton_1 = new JButton("Pizzas");
 			btnNewButton_1.setEnabled(true);
 			btnNewButton_1.addMouseListener(new MouseAdapter() {
 				@Override
 				public void mouseClicked(MouseEvent e) {
+					if(btnNewButton_1.isEnabled()==true) {
 					pizza.setVisible(true);
+					}
 				}
-			});
-		}else {
-			btnNewButton_1.setEnabled(false);	
-		}
+			});	
 		btnNewButton_1.setBounds(23, 45, 89, 23);
 		contentPane.add(btnNewButton_1);
-		JButton btnNewButton_2 = new JButton("Paninis");
-		if(partida.getPuntuaciontotal()>=50000) {
+		
+		this.btnNewButton_2 = new JButton("Paninis");
 			btnNewButton_2.setEnabled(true);
 			btnNewButton_2.addMouseListener(new MouseAdapter() {
 				@Override
 				public void mouseClicked(MouseEvent e) {
-					panini.setVisible(true);
+					if(btnNewButton_2.isEnabled()==true) {
+						panini.setVisible(true);						
+					}
 				}
 			});
-		}else {
-			btnNewButton_2.setEnabled(false);		
-		}
+
 		btnNewButton_2.setBounds(23, 79, 89, 23);
 		contentPane.add(btnNewButton_2);
-		JButton btnNewButton_3 = new JButton("Noodles");
-		if(partida.getPuntuaciontotal()>=200000) {
+		
+		this.btnNewButton_3 = new JButton("Noodles");
 			btnNewButton_3.setEnabled(true);
 			btnNewButton_3.addMouseListener(new MouseAdapter() {
 				@Override
 				public void mouseClicked(MouseEvent e) {
-					noodles.setVisible(true);
+					if(btnNewButton_3.isEnabled()==true) {
+						noodles.setVisible(true);					
+					}
 				}
 			});
-		}else {
-			btnNewButton_3.setEnabled(false);			
-		}
 		btnNewButton_3.setBounds(23, 113, 89, 23);
 		contentPane.add(btnNewButton_3);
 		
@@ -88,6 +88,38 @@ public class MejorasPrevio extends JFrame {
 		});
 		btnNewButton_4.setBounds(23, 147, 89, 23);
 		contentPane.add(btnNewButton_4);
+	}
+	
+	public JButton btnNewButton() {
+		return btnNewButton;
+	}
+	
+	public void setbtnNewButton(boolean enable) {
+		this.btnNewButton.setEnabled(enable);
+	}
+
+	public JButton btnNewButton_1() {
+		return btnNewButton_1;
+	}
+	
+	public void setbtnNewButton_1(boolean enable) {
+		this.btnNewButton_1.setEnabled(enable);
+	}
+
+	public JButton btnNewButton_2() {
+		return btnNewButton_2;
+	}
+	
+	public void setbtnNewButton_2(boolean enable) {
+		this.btnNewButton_2.setEnabled(enable);
+	}
+
+	public JButton btnNewButton_3() {
+		return btnNewButton_3;
+	}
+	
+	public void setbtnNewButton_3(boolean enable) {
+		this.btnNewButton_3.setEnabled(enable);
 	}
 
 }

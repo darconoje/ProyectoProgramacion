@@ -68,6 +68,11 @@ public class Acceso extends JFrame {
 		lblUsuarioDuplicado.setVisible(false);
 		panel.add(lblUsuarioDuplicado);
 		
+		/**
+		 * El boton de login recoge el texto del campo de usuario y contraseña para mandarlo a la funcion loginUsuario
+		 * Si el return es false se muestra que el login es incorrecto, si no, lleva al jframe principal del juego
+		 */
+		
 		btnLogin = new JButton("Login");
 		btnLogin.addMouseListener(new MouseAdapter() {
 			@Override
@@ -82,7 +87,6 @@ public class Acceso extends JFrame {
 					dispose();
 					Juego juego = new Juego(usuario);
 					juego.setVisible(true);
-					//setUsuario(textField.getText());
 				}
 			}
 		});
@@ -99,6 +103,11 @@ public class Acceso extends JFrame {
 		lblNewLabel.setBounds(139, 74, 175, 14);
 		lblNewLabel.setVisible(false);
 		panel.add(lblNewLabel);
+		
+		/**
+		 * El boton de registrase recoge el texto del campo de usuario y contraseña para mandarlo a la funcion registrarse
+		 * Si el usuario esta duplicado se muestra en pantalla el mensaje
+		 */
 		
 		btnRegistrarse = new JButton("Registrarse");
 		btnRegistrarse.addActionListener(new ActionListener() {

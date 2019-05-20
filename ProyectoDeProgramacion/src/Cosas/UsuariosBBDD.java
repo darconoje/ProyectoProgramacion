@@ -4,6 +4,11 @@ import java.sql.SQLException;
 
 import Cosas.Conexion;
 import java.util.ArrayList;
+/**
+ * La clase UsuariosBBDD recoge la mayor parte de las funciones que interactuan con la base de datos
+ * @author Dario
+ *
+ */
 public class UsuariosBBDD {
 	
 	private ArrayList<String> nombres;

@@ -6,12 +6,17 @@ package Cosas;
 	import java.sql.SQLException;
 	import java.sql.Statement;
 
-
+	/**
+	 * Se crea el objeto conexion para conectarse a la base de datos y poder ejecutar sentencias y updates
+	 * @author Dario
+	 *
+	 */
 	public class Conexion {
 		
 		static String timeZone = "?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
 		static String dbName="proyectoprogramacion";
-		static String url="jdbc:mysql://localhost:3307/"+dbName+timeZone;
+		//localhost:3307
+		static String url="jdbc:mysql://localhost:3306/"+dbName+timeZone;
 		static String user = "root";
 		static String pass = "manolo";
 
